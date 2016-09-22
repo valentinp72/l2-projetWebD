@@ -1,2 +1,5 @@
 # projetWebD
-School project
+Projet Web Dynamique : Réalisation d'une ludothèque
+
+
+
