@@ -1,0 +1,30 @@
+#headerBar
+{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	top: 0px;
+	bottom: 0px;
+	background-color: #ff432f;
+}
+
+/* vert: #b1eb00, bleu: #52bbf4, rose: #fe85ca, rouge #ff432f, orange #feac00, gris: #e4e4e4*/
+
+@font-face
+{
+	font-family: 'FFF_Tusj';
+	src: url(media/font/FFF_Tusj.ttf);
+}
+
+#logo
+{
+	font-family: FFF_Tusj;
+	font-size: 200%;
+	color: #e4e4e4;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
