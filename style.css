@@ -1,3 +1,5 @@
+
+/* style de la barre horizontal */
 #headerBar
 {
 	position: fixed;
@@ -8,14 +10,14 @@
 	background-color: #ff432f;
 }
 
-/* vert: #b1eb00, bleu: #52bbf4, rose: #fe85ca, rouge #ff432f, orange #feac00, gris: #e4e4e4*/
-
+/* ajout d'une police pour le logo */
 @font-face
 {
 	font-family: 'FFF_Tusj';
 	src: url(media/font/FFF_Tusj.ttf);
 }
 
+/* style du logo */
 #logo
 {
 	font-family: FFF_Tusj;
@@ -23,6 +25,7 @@
 	color: #e4e4e4;
 }
 
+/* style des liens */
 a
 {
 	text-decoration: none;
