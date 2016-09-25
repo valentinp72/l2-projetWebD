@@ -1,0 +1,6 @@
+vert: #b1eb00
+bleu: #52bbf4
+rose: #fe85ca
+rouge #ff432f
+orange #feac00
+gris: #e4e4e4
