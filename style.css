@@ -83,7 +83,7 @@ html, body {
 	margin-right: 20px;
 	line-height: 40px;
 }
-#header ul a {
+#header ul a{
 	color: white;
 	text-decoration: none;
 
@@ -94,6 +94,11 @@ html, body {
 	font-size: 18pt;
 	margin: 20px;
 }
+
+.separator {
+	color: white;
+}
+
 #titreMenu {
 	margin-top: 20px;
 	margin-left: 20px;
