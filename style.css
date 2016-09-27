@@ -93,7 +93,7 @@ html, body {
 	margin: 20px;
 }
 #titreMenu {
-	line-height: 40px;
+	margin-top: 20px;
 }
 #titreMenu a{
 	color: white;
