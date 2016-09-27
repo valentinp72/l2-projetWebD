@@ -74,13 +74,13 @@ html, body {
 	top: 0px;
 	width: 100%;
 	height: 80px;
+	line-height: 40px;
 	background-color: #ff432f;
 	box-shadow: 0 0 10px #d9d9d9;
 
 }
 #header ul {
 	margin-right: 20px;
-	line-height: 40px;
 }
 #header ul a {
 	color: white;
