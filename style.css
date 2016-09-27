@@ -79,8 +79,8 @@ html, body {
 
 }
 #header ul {
-	top: 0;
-	right: 0;
+	margin-right: 20px;
+	line-height: 40px;
 }
 #header ul a {
 	color: white;
