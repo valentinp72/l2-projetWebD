@@ -68,6 +68,7 @@ html, body {
 /* Barre du menu */
 #header {
 	position: fixed;
+	display: inline;
 	top: 0px;
 	width: 100%;
 	height: 80px;
