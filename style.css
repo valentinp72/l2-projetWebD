@@ -92,12 +92,14 @@ html, body {
 	font-size: 18pt;
 	margin: 20px;
 }
+#titreMenu {
+	margin-top: 40px;
+}
 #titreMenu a{
 	color: white;
 	font-family: Gwibble;
 	text-decoration: none;
 	font-size: 26pt;
-	margin-top: 40px;
 }
 
 
