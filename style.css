@@ -89,13 +89,13 @@ html, body {
 
 }
 #header li {
-	list-style-type: none;
+	/*list-style-type: none;*/
 	display: inline;
 	font-size: 18pt;
 	margin: 20px;
 }
 
-.separator {
+#header .separator {
 	color: white;
 }
 
@@ -118,10 +118,18 @@ html, body {
 #content {
 }
 #hierarchie {
-	padding: 20px;
-	margin-top: 100px; 
-	
+	padding: 5px;
+	margin-top: 100px;
 	background-color: #e4e4e4;
+}
+
+#hierarchie li {
+	display: inline;
+}
+
+
+#hierarchie .separator {
+	color: black;
 }
 
 
