@@ -98,9 +98,12 @@ html, body {
 	margin: 20px;
 }
 #header .hamburger {
-
+	margin-right: 20px;
+	font-size: 18pt;
+	line-height: 20px;
+	font-family: Open Sans;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 849px) {
 	#header ul{
 		display: none;
 	}
