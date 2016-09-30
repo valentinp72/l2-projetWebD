@@ -97,11 +97,13 @@ html, body {
 	font-size: 18pt;
 	margin: 20px;
 }
-#header .hamburger {
+#header #hamburger {
+	margin-top: 15px;
 	margin-right: 20px;
-	font-size: 18pt;
+	font-size: 24pt;
 	line-height: 20px;
 	font-family: Open Sans;
+	color: white;
 }
 @media screen and (max-width: 849px) {
 	#header ul{
