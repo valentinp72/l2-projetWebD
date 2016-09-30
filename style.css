@@ -1,3 +1,7 @@
+/* Police Open Sans, lien google font pour + de rapidité et de compatibilité */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+
 html, body {
 	margin: 0;
 	padding: 0;
@@ -21,10 +25,6 @@ body {
 	font-family: 'Gwibble';
 	src: url(media/font/gwibble.ttf);
 }
-/* Police Open Sans, lien google font pour etre plus rapide et plus compatibilite */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans';
-
-
 
 
 
