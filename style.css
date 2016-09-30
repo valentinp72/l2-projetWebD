@@ -55,12 +55,15 @@ html, body {
 .flaticon-success:before { 
 	content: "\f106"; 
 }
+.flaticon-shopping-cart:before { 
+	content: "\f106"; 
+}
+
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
 	font-size: 20px;
 	font-style: normal;
-	margin-left: 20px;
 }
 
 /* ==== */
