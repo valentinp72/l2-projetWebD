@@ -97,7 +97,7 @@ html, body {
 	font-size: 18pt;
 	margin: 20px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
 	#header ul{
 		display: none;
 	}
