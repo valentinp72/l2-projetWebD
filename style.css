@@ -109,6 +109,16 @@ body {
 	font-size: 18pt;
 	margin: 20px;
 }
+
+#header li.text:hover {
+	background-color: #990000;
+	border-radius: 10px;
+}
+
+#header li.icon:hover a {
+	color: black;
+}
+
 #header #hamburger {
 	margin-top: auto;
 	margin-right: 20px;
