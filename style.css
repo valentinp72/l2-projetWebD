@@ -105,12 +105,12 @@ html, body {
 	font-family: Open Sans;
 	color: white;
 }
-@media screen and (max-width: 849px) {
+@media all and (max-width: 849px) {
 	#header ul{
 		display: none;
 	}
 }
-@media screen and (min-width: 850px) {
+@media all and (min-width: 850px) {
 	#header #hamburger{
 		display: none;
 	}
