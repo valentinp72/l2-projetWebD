@@ -87,7 +87,7 @@ body {
 #header {
 	position: fixed;
 	display: flex;
-	flex-wrap: no-wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	top: 0px;
 	width: 100%;
@@ -97,7 +97,7 @@ body {
 #header ul {
 	margin-right: 20px;
 	line-height: 20px;
-	font-family: Open Sans;
+	font-family: "Open Sans";
 }
 #header ul a{
 	color: white;
@@ -113,7 +113,7 @@ body {
 	margin-top: auto;
 	margin-right: 20px;
 	font-size: 30pt;
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	color: white;
 }
 #header .separator {
@@ -174,7 +174,7 @@ body {
 
 #hierarchie li {
 	display: inline-block;
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	font-size: 15pt;
 	color: #cc0000;
 }
@@ -193,7 +193,7 @@ body {
 /* ======= */
 
 #content {
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	margin: 50px;
 }
 
@@ -210,7 +210,7 @@ body {
 	width: 100%;
 	bottom: 0;
 	background-color: #cccccc;
-	font-family: Open Sans;
+	font-family: "Open Sans";
 	color: #cc0000;
 	text-align: center;
 }
