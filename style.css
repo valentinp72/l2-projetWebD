@@ -107,12 +107,14 @@ body {
 #header li {
 	display: inline;
 	font-size: 18pt;
-	margin: 20px;
+	margin: 16px;
+	padding: 4px;
 }
 
 #header li.text:hover {
 	background-color: #990000;
 	border-radius: 10px;
+
 }
 
 #header li.icon:hover a {
