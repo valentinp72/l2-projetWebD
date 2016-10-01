@@ -492,15 +492,9 @@ body {
 /* ====== */
 
 #footer {
-<<<<<<< HEAD
 	padding-top: 10px;
 	padding-bottom: 10px;
-=======
-	/*position: fixed;*/
-	height: 70px;
->>>>>>> origin/master
 	width: 100%;
-	/*bottom: 0;*/
 	background-color: #cccccc;
 	font-family: "Open Sans";
 	color: gray;
@@ -518,19 +512,12 @@ body {
 #footer li {
 	display: inline;
 }
-<<<<<<< HEAD
 @media all and (max-width: 750px) {
 	#footer li {
 		display: list-item;
 		list-style-type: none;
 	}
 }
-
-=======
-#footer ul {
-	padding-top: 20px;
-}
->>>>>>> origin/master
 
 
 
