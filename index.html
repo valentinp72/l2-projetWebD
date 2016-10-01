@@ -9,11 +9,30 @@
 
 		<!-- Corrige le zoom sur les mobiles -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+		<!-- Jquery pour le menu et le slideshow -->
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+    	<script src="menu.js"></script>
 	</head>
 
 	<body>
 
-		
+		<div id="menu-hamburger">
+			<ul>
+				<li><a href="#">Blabla</a></li>
+				<li><a href="#">Blabla</a></li>
+				<li><a href="#">Blabla</a></li>
+				<li><a href="#">Blabla</a></li>
+			</ul>
+		</div>
+
+		<!-- Div qui sera affiché une fois le menu ouvert pour qu'il ne soit plus clickable -->
+    	<div id="contentLayer"></div>
+
+    	<!-- Conteneur global de la page, utile pour le menu hamburger -->
+    	<div id="pageContent">
 
 			<div id="header">
 
@@ -31,59 +50,62 @@
 					
 				</ul>
 			    <div id="hamburger">
-	        		☰
+			    	<!-- Permet de générer les trois barres de l'hamburger -->
+	        		<div></div>
+	        		<div></div>
+	        		<div></div>
 	        	</div>
 			</div>
 
-		<div id="main">
-		
-	        <div id="hierarchie">
-	        	<ul>
-	        		<li><a href="#">LudoTEK</a></li>
-	        			<li class="separator"></li>
-	        		<li><a href="#">Catalogue</a></li>
-	        			<li class="separator"></li>
-	        		<li><a href="#">Monopoly</a></li>
-	        	
-	        	</ul>
-	        </div>
+			<div id="main">
+			
+		        <div id="hierarchie">
+		        	<ul>
+		        		<li><a href="#">LudoTEK</a></li>
+		        			<li class="separator"></li>
+		        		<li><a href="#">Catalogue</a></li>
+		        			<li class="separator"></li>
+		        		<li><a href="#">Monopoly</a></li>
+		        	
+		        	</ul>
+		        </div>
 
-				
-			<div id="content">
+					
+				<div id="content">
 
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-				</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
+					</p>
+					
+					
 				
-				
+				</div>
 			
 			</div>
-		
-		</div>
 			<div id="footer">
 
 				<ul>
@@ -101,6 +123,7 @@
 
 			</div>
 		
+		</div>
 		
 		 
 

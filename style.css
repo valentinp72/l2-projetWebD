@@ -304,7 +304,17 @@ body {
 	background-color: white;
 	flex: 1;
 }
-
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    z-index: 5;
+}
 
 /* ====== */
 /* ICONES */
@@ -394,17 +404,22 @@ body {
 	color: black;
 }
 
-#header #hamburger {
-	margin-top: auto;
-	margin-right: 20px;
-	font-size: 30pt;
-	font-family: "Open Sans";
-	color: white;
-}
+
 #header .separator {
 	color: white;
 }
-
+#header #hamburger {
+	cursor: pointer;
+	display: block;
+	top: 0;
+	margin-bottom: 20px;
+} 
+#header #hamburger div{
+	background-color: #fff;
+	height: 4px;
+	width: 40px;
+	margin-top: 4px;
+}
 #titreMenu {
 	margin-top: 7px;
 	margin-left: 20px;
@@ -427,7 +442,19 @@ body {
 	}
 }
 
+#menu-hamburger {
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+	position: fixed;
+	z-index: 0;
+	width: 70%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: #3e3c3d;
 
+}
 
 /* ========== */
 /* HIERARCHIE */
