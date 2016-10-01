@@ -213,10 +213,10 @@ body {
 /* ====== */
 
 #footer {
-	position: absolute;
+	/*position: fixed;*/
 	height: 70px;
 	width: 100%;
-	bottom: 0;
+	/*bottom: 0;*/
 	background-color: #cccccc;
 	font-family: "Open Sans";
 	color: #cc0000;
@@ -231,6 +231,9 @@ body {
 }
 #footer li {
 	display: inline;
+}
+#footer ul {
+	padding-top: 20px;
 }
 
 
