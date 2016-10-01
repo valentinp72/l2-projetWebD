@@ -18,9 +18,6 @@
 
 
 
-
-
-
 html, body {
 	margin: 0;
 	padding: 0;
@@ -260,22 +257,7 @@ body {
 
 
 
-/* ======= */
-/* POLICES */
-/* ======= */
 
-/* Police Open Sans, lien google font pour + de rapidité et de compatibilité */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans';
-
-/* Ajout d'une police pour le logo */
-@font-face {
-	font-family: 'FFF_Tusj';
-	src: url(media/font/FFF_Tusj.ttf);
-}
-@font-face {
-	font-family: 'Gwibble';
-	src: url(media/font/gwibble.ttf);
-}
 
 
 
