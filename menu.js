@@ -1,61 +1,56 @@
-/**
- * hamburger.js
- *
- * Mobile Menu Hamburger
- * =====================
- * A hamburger menu for mobile websites
- *
- * Created by Thomas Zinnbauer YMC AG  |  http://www.ymc.ch
- * Date: 21.05.13
- */
-
 jQuery(document).ready(function () {
 
-    //Open the menu
+    //Ouverture du menu
     jQuery("#hamburger").click(function () {
 
-        jQuery('#pageContent').css('min-height', jQuery(window).height());
+        //On affiche le menu
+        jQuery('#menu-hamburger').css('opacity', 1);
+        jQuery('#menu-hamburger').css('display', 'block');
 
-        jQuery('menu-hamburger').css('opacity', 1);
-
-        //set the width of primary content container -> content should not scale while animating
-        var contentWidth = jQuery('#pageContent').width();
-
-        //set the content with the width that it has originally
-        jQuery('#pageContent').css('width', contentWidth);
-
-        //display a layer to disable clicking and scrolling on the content while menu is shown
+        //On fixe le contenu de la page, pour empecher le scroll
+        jQuery('#pageContent').css('position', 'fixed');
         jQuery('#contentLayer').css('display', 'block');
 
-        //disable all scrolling on mobile devices while menu is shown
-        jQuery('#container').bind('touchmove', function (e) {
+        //Ouverture de l'anti-scroll : décalage vers la gauche, permet de suivre le reste du contenu pour pouvroir cliquer dessus
+        jQuery('#contentLayer').addClass('open');
+        //Ouverture du contenu de la page : décalage vers la gauche
+        jQuery('#pageContent').addClass('open');
+       
+
+        
+        //Désactivation du scroll sur les mobiles
+        jQuery('#pageContent').bind('touchmove', function (e) {
             e.preventDefault()
         });
 
-        //set margin for the whole container with a jquery UI animation
-        jQuery("#container").animate({"marginLeft": ["70%", 'easeOutExpo']}, {
-            duration: 700
-        });
 
     });
 
-    //close the menu
-    jQuery("#contentLayer").click(function () {
+    //Fermeture du menu, on change le click en "click touchstart" pour être reconnu avec certains smartphones
+    jQuery(document).on('click touchstart', function(event){
 
-        //enable all scrolling on mobile devices when menu is closed
-        jQuery('#container').unbind('touchmove');
+        if(jQuery(event.target).closest('#contentLayer').length && !$(event.target).closest("#hamburger").length) {
 
-        //set margin for the whole container back to original state with a jquery UI animation
-        jQuery("#container").animate({"marginLeft": ["-1", 'easeOutExpo']}, {
-            duration: 700,
-            complete: function () {
-                jQuery('#pageContent').css('width', 'auto');
-                jQuery('#contentLayer').css('display', 'none');
-                jQuery('menu-hamburger').css('opacity', 0);
-                jQuery('#pageContent').css('min-height', 'auto');
+            jQuery('#pageContent').addClass('close');
+            jQuery('#pageContent').removeClass('open');
+            jQuery('#contentLayer').removeClass('open');
 
-            }
-        });
+            setTimeout(function() {
+                //Après 700ms, on masque le menu, et on retire la class close à au contenu
+                jQuery('#menu-hamburger').css('opacity', 0);
+                jQuery('#pageContent').removeClass('close');
+                jQuery('#menu-hamburger').css('display', 'none');
+            }, 700);
+
+            //On ré-autorise le scroll de la page
+            jQuery('#contentLayer').css('display', 'none');
+            jQuery('#pageContent').css('position', 'relative');
+
+            //Activation du scroll sur les mobiles
+            jQuery('#pageContent').unbind('touchmove');
+        } 
+
     });
+
 
 });

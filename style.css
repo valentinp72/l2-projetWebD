@@ -42,267 +42,8 @@ body {
 	background-color: white;
 	flex: 1;
 }
-
-
-/* ====== */
-/* ICONES */
-/* ====== */
-
-@font-face {
-  font-family: "Flaticon";
-  src: url("media/font/Flaticon.eot");
-  src: url("media/font/Flaticon.woff") format("woff"),
-       url("media/font/Flaticon.ttf") format("truetype"),
-       url("media/font/Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-.flaticon-back:before { 
-	content: "\f100"; 
-}
-.flaticon-error:before { 
-	content: "\f101"; 
-}
-.flaticon-heart:before { 
-	content: "\f102"; 
-}
-.flaticon-house:before { 
-	content: "\f103"; 
-}
-.flaticon-magnifying-glass:before { 
-	content: "\f104"; 
-}
-.flaticon-next:before { 
-	content: "\f105"; 
-}
-.flaticon-success:before { 
-	content: "\f106"; 
-}
-.flaticon-shopping-cart:before { 
-	content: "\f106"; 
-}
-
-
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
-	font-size: 20px;
-	font-style: normal;
-}
-
-
-
-
-
-/* ==== */
-/* MENU */
-/* ==== */
-
-/* Barre du menu */
-#header {
-	position: fixed;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	top: 0px;
-	width: 100%;
-	background-color: #cc0000;
-	box-shadow: 0px 1px 5px 0px #656565;
-}
-#header ul {
-	margin-right: 20px;
-	line-height: 20px;
-	font-family: "Open Sans";
-}
-#header ul a{
-	color: white;
-	text-decoration: none;
-
-}
-#header li {
-	display: inline;
-	font-size: 18pt;
-	margin: 16px;
-	padding: 4px;
-}
-
-
-
-#header li.liens:hover a {
-	color: black;
-}
-
-#header #hamburger {
-	margin-top: auto;
-	margin-right: 20px;
-	font-size: 30pt;
-	font-family: "Open Sans";
-	color: white;
-}
-#header .separator {
-	color: white;
-}
-
-#titreMenu {
-	margin-top: 7px;
-	margin-left: 20px;
-}
-#titreMenu a{
-	color: white;
-	font-family: Gwibble;
-	text-decoration: none;
-	font-size: 35pt;
-}
-
-@media all and (max-width: 1000px) {
-	#header ul{
-		display: none;
-	}
-}
-@media all and (min-width: 1001px) {
-	#header #hamburger{
-		display: none;
-	}
-}
-
-
-
-/* ========== */
-/* HIERARCHIE */
-/* ========== */
-#hierarchie {
-	display: flex;
-	margin-top: 70px;
-	margin-left: 50px;
-
-}
-#hierarchie a {
-	text-decoration: none;
-	color: #cc0000;
-}
-#hierarchie ul {
-	display: inline-block;
-	background-color: #e4e4e4;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-@media all and (max-width: 1000px) {
-	#hierarchie {
-		margin-left: 0px;
-     	justify-content: center;
-	}
-}
-
-#hierarchie li {
-	display: inline-block;
-	font-family: "Open Sans";
-	font-size: 15pt;
-	color: #cc0000;
-}
-
-
-#hierarchie .separator {
-	color: #999999;
-	font-size: 20px;
-}
-
-
-
-
-/* ======= */
-/* CONTENU */
-/* ======= */
-
-#content {
+#pageContent {
 	background-color: white;
-	font-family: "Open Sans";
-	margin: 50px;
-}
-
-
-
-
-/* ====== */
-/* FOOTER */
-/* ====== */
-
-#footer {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 100%;
-	bottom: 0;
-	background-color: #cccccc;
-	font-family: "Open Sans";
-	color: gray;
-	text-align: center;
-}
-#footer a {
-	text-decoration: none;
-	color: #cc0000;
-}
-#footer .separator {
-	padding-left: 5px;
-	padding-right: 5px;
-	color: gray;
-}
-#footer li {
-	display: inline;
-}
-@media all and (max-width: 750px) {
-	#footer li {
-		display: list-item;
-		list-style-type: none;
-	}
-}
-
-
-
-
-
-/* ======= */
-/* POLICES */
-/* ======= */
-
-/* Police Open Sans, lien google font pour + de rapidité et de compatibilité */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans';
-
-/* Ajout d'une police pour le logo */
-@font-face {
-	font-family: 'FFF_Tusj';
-	src: url(media/font/FFF_Tusj.ttf);
-}
-@font-face {
-	font-family: 'Gwibble';
-	src: url(media/font/gwibble.ttf);
-}
-
-
-
-
-
-
-
-html, body {
-	margin: 0;
-	padding: 0;
-	background-color: #cccccc;
-}
-
-/* Fixation du footer en bas de page */
-html {
-	height: 100%;
-}
-body {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-/* Contenu de toute la page, permet de fixer le footer en bas, même si la page est plus courte que l'écran */
-#main {
-	background-color: white;
-	flex: 1;
 }
 #contentLayer {
     display: none;
@@ -310,11 +51,12 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
-    width: 30%;
+    width: 100%;
     z-index: 5;
 }
+
 
 /* ====== */
 /* ICONES */
@@ -413,6 +155,8 @@ body {
 	display: block;
 	top: 0;
 	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-top: auto;
 } 
 #header #hamburger div{
 	background-color: #fff;
@@ -443,18 +187,58 @@ body {
 }
 
 #menu-hamburger {
-	opacity: 0;
-	left: 0px;
-	top: 0px;
+	display: none;
 	position: fixed;
-	z-index: 0;
-	width: 70%;
+	opacity: 0;
+	background-color: #cccccc;
+	top: 0;
+	right: 0;
+	width: 200px;
 	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background: #3e3c3d;
+	z-index: 0;
+}
+#menu-hamburger ul {
+	list-style: none;
 
 }
+#menu-hamburger li {
+	font-family: "Open Sans";
+	font-size: 15pt;
+}
+#menu-hamburger li:hover a {
+	color: black;
+}
+#menu-hamburger li.active a {
+	color: gray;
+}
+#menu-hamburger li a {
+	text-decoration: none;
+	color: #cc0000;
+}
+#titreHamburger {
+	text-align: center;
+	padding: 9px;
+	border-bottom: 1px solid gray;
+}
+#titreHamburger a {
+	font-family: "Gwibble";
+	font-size: 28pt;
+	text-decoration: none;
+	color: #cc0000;
+}
+
+
+/* Ouverture et fermeture du menu hamburger */
+.open {
+	transform: translate(-200px, 0);
+	transition-duration: 700ms;
+}
+.close {
+	transform: translate(0px, 0);
+	transition-duration: 700ms;
+}
+
+
 
 /* ========== */
 /* HIERARCHIE */
@@ -497,12 +281,16 @@ body {
 	font-size: 20px;
 }
 @media all and (max-width: 400px) {
+	#hierarchie ul {
+		border-radius: 0px;
+		width: 100%;
+		text-align: center;
+	}
 	#hierarchie li{
 		display: list-item;
 		list-style: none;
+		overflow: hidden;
 		margin-left: -20px;
-		width: 100vw;
-		list-style-position: -100px -100px;
 		text-align: center;
 	}
 	#hierarchie .separator:after {
