@@ -111,13 +111,9 @@ body {
 	padding: 4px;
 }
 
-#header li.text:hover {
-	background-color: #990000;
-	border-radius: 10px;
 
-}
 
-#header li.icon:hover a {
+#header li.liens:hover a {
 	color: black;
 }
 
