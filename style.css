@@ -180,7 +180,6 @@ body {
 	}
 }
 
-<<<<<<< HEAD
 
 /* ========== */
 /* HIERARCHIE */
@@ -203,7 +202,7 @@ body {
 	background-color: #e4e4e4;
     border-radius: 10px;
     padding: 20px;
-
+}
 #menu-hamburger {
 	display: none;
 	position: fixed;
@@ -217,7 +216,7 @@ body {
 }
 #menu-hamburger ul {
 	list-style: none;
-
+}
 /*<<<<<<< HEAD
 #hierarchie li {
 	display: inline-block;
@@ -238,6 +237,7 @@ body {
 	content: ">";
 	color: #999999;
 	font-size: 20px;
+}
 #menu-hamburger li:hover a {
 	color: black;
 }
