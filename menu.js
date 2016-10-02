@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
 
-    var menuOuvert = false;
+    var menuOuvert = false; //Stocke l'état du menu
 
     //Ouverture du menu
     jQuery("#hamburger").click(function () {
