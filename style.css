@@ -41,6 +41,20 @@ body {
 	background-color: white;
 	flex: 1;
 }
+#pageContent {
+	background-color: white;
+}
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
 
 /* ====== */
 /* ICONES */
@@ -126,17 +140,24 @@ body {
 	color: black;
 }
 
-#header #hamburger {
-	margin-top: auto;
-	margin-right: 20px;
-	font-size: 30pt;
-	font-family: "Open Sans";
-	color: white;
-}
+
 #header .separator {
 	color: white;
 }
-
+#header #hamburger {
+	cursor: pointer;
+	display: block;
+	top: 0;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-top: auto;
+} 
+#header #hamburger div{
+	background-color: #fff;
+	height: 4px;
+	width: 40px;
+	margin-top: 4px;
+}
 #titreMenu {
 	margin-top: 7px;
 	margin-left: 20px;
@@ -159,6 +180,7 @@ body {
 	}
 }
 
+<<<<<<< HEAD
 
 /* ========== */
 /* HIERARCHIE */
@@ -181,13 +203,29 @@ body {
 	background-color: #e4e4e4;
     border-radius: 10px;
     padding: 20px;
-}
 
+#menu-hamburger {
+	display: none;
+	position: fixed;
+	opacity: 0;
+	background-color: #cccccc;
+	top: 0;
+	right: 0;
+	width: 200px;
+	height: 100%;
+	z-index: 0;
+}
+#menu-hamburger ul {
+	list-style: none;
+
+/*<<<<<<< HEAD
 #hierarchie li {
 	display: inline-block;
+=======
+}*/
+#menu-hamburger li {
 	font-family: "Open Sans";
 	font-size: 15pt;
-	color: #cc0000;
 }
 
 
@@ -200,6 +238,59 @@ body {
 	content: ">";
 	color: #999999;
 	font-size: 20px;
+#menu-hamburger li:hover a {
+	color: black;
+}
+#menu-hamburger li.active a {
+	color: gray;
+}
+#menu-hamburger li a {
+	text-decoration: none;
+	color: #cc0000;
+}
+#titreHamburger {
+	text-align: center;
+	padding: 9px;
+	border-bottom: 1px solid gray;
+}
+#titreHamburger a {
+	font-family: "Gwibble";
+	font-size: 28pt;
+	text-decoration: none;
+	color: #cc0000;
+}
+
+
+/* Ouverture et fermeture du menu hamburger */
+.open {
+	transform: translate(-200px, 0);
+	transition-duration: 700ms;
+}
+.close {
+	transform: translate(0px, 0);
+	transition-duration: 700ms;
+}
+
+
+
+/* ========== */
+/* HIERARCHIE */
+/* ========== */
+#hierarchie {
+	display: flex;
+	margin-top: 70px;
+	margin-left: 50px;
+
+}
+#hierarchie a {
+	text-decoration: none;
+	color: #cc0000;
+}
+#hierarchie ul {
+	display: inline-block;
+	background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 @media all and (max-width: 1000px) {
@@ -210,12 +301,16 @@ body {
 }
 
 @media all and (max-width: 400px) {
+	#hierarchie ul {
+		border-radius: 0px;
+		width: 100%;
+		text-align: center;
+	}
 	#hierarchie li{
 		display: list-item;
 		list-style: none;
+		overflow: hidden;
 		margin-left: -20px;
-		width: 100vw;
-		list-style-position: -100px -100px;
 		text-align: center;
 	}
 	#hierarchie .separator:after {
