@@ -16,9 +16,10 @@
 }
 
 
-/* ======= */
-/* GENERAL */
-/* ======= */
+
+
+
+
 
 html, body {
 	margin: 0;
@@ -55,6 +56,7 @@ body {
     width: 100%;
     z-index: 5;
 }
+
 
 /* ====== */
 /* ICONES */
@@ -103,6 +105,9 @@ body {
 }
 
 
+
+
+
 /* ==== */
 /* MENU */
 /* ==== */
@@ -118,7 +123,6 @@ body {
 	background-color: #cc0000;
 	box-shadow: 0px 1px 5px 0px #656565;
 }
-
 #header ul {
 	margin-right: 20px;
 	line-height: 20px;
@@ -135,6 +139,8 @@ body {
 	margin: 16px;
 	padding: 4px;
 }
+
+
 
 #header li.liens:hover a {
 	color: black;
@@ -180,29 +186,6 @@ body {
 	}
 }
 
-
-/* ========== */
-/* HIERARCHIE */
-/* ========== */
-
-#hierarchie {
-	display: flex;
-	margin-top: 70px;
-	margin-left: 50px;
-
-}
-
-#hierarchie a {
-	text-decoration: none;
-	color: #cc0000;
-}
-
-#hierarchie ul {
-	display: inline-block;
-	background-color: #e4e4e4;
-    border-radius: 10px;
-    padding: 20px;
-}
 #menu-hamburger {
 	display: none;
 	position: fixed;
@@ -216,27 +199,11 @@ body {
 }
 #menu-hamburger ul {
 	list-style: none;
+
 }
-/*<<<<<<< HEAD
-#hierarchie li {
-	display: inline-block;
-=======
-}*/
 #menu-hamburger li {
 	font-family: "Open Sans";
 	font-size: 15pt;
-}
-
-
-#hierarchie .separator {
-	color: #999999;
-	font-size: 20px;
-}
-
-#hierarchie .separator:after {
-	content: ">";
-	color: #999999;
-	font-size: 20px;
 }
 #menu-hamburger li:hover a {
 	color: black;
@@ -300,6 +267,19 @@ body {
 	}
 }
 
+#hierarchie li {
+	display: inline-block;
+	font-family: "Open Sans";
+	font-size: 15pt;
+	color: #cc0000;
+}
+
+
+#hierarchie .separator:after {
+	content: ">";
+	color: #999999;
+	font-size: 20px;
+}
 @media all and (max-width: 400px) {
 	#hierarchie ul {
 		border-radius: 0px;
@@ -319,6 +299,7 @@ body {
 }
 
 
+
 /* ======= */
 /* CONTENU */
 /* ======= */
@@ -330,6 +311,8 @@ body {
 }
 
 
+
+
 /* ====== */
 /* FOOTER */
 /* ====== */
@@ -338,7 +321,6 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 100%;
-	bottom: 0; /*diff*/
 	background-color: #cccccc;
 	font-family: "Open Sans";
 	color: gray;
@@ -353,17 +335,21 @@ body {
 	padding-right: 5px;
 	color: gray;
 }
+#footer ul {
+	margin: auto;
+}
 #footer li {
 	display: inline;
 }
 
-#footer ul {
-	margin: auto;
-}
 @media all and (max-width: 750px) {
 	#footer li {
 		display: list-item;
 		list-style-type: none;
-		margin-right: 40px; /*diff*/
+		margin-right: 40px;
+
 	}
 }
+
+
+
