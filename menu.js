@@ -44,12 +44,12 @@ jQuery(document).ready(function () {
             jQuery('#contentLayer').removeClass('open');
 
             setTimeout(function() {
-                //Après 700ms, on masque le menu, et on retire la class close à au contenu
+                //Après 300ms, on masque le menu, et on retire la class close à au contenu
                 jQuery('#menu-hamburger').css('opacity', 0);
                 jQuery('#pageContent').removeClass('close');
                 jQuery('#menu-hamburger').css('display', 'none');
                 menuOuvert = false;
-            }, 700);
+            }, 300);
 
             //On ré-autorise le scroll de la page
             jQuery('#contentLayer').css('display', 'none');
