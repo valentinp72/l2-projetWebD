@@ -10,14 +10,24 @@ jQuery(document).ready(function () {
             jQuery('#menu-hamburger').css('opacity', 1);
             jQuery('#menu-hamburger').css('display', 'block');
 
+            offsetY = window.pageYOffset;
             //On fixe le contenu de la page, pour empecher le scroll
-            jQuery('#pageContent').css('position', 'fixed');
-            jQuery('#contentLayer').css('display', 'block');
+            jQuery('html').css('position', 'fixed');
 
+            jQuery('html').css('top', -offsetY + 'px');
+
+            jQuery('#contentLayer').css('display', 'block');
+            jQuery('#contentLayer').css('position', 'fixed');
+            
+
+
+
+        
             //Ouverture de l'anti-scroll : décalage vers la gauche, permet de suivre le reste du contenu pour pouvroir cliquer dessus
             jQuery('#contentLayer').addClass('open');
             //Ouverture du contenu de la page : décalage vers la gauche
             jQuery('#pageContent').addClass('open');
+            
            
 
             
@@ -26,6 +36,7 @@ jQuery(document).ready(function () {
                 e.preventDefault()
             });
             menuOuvert = true;
+
         }
         
 
@@ -53,7 +64,12 @@ jQuery(document).ready(function () {
 
             //On ré-autorise le scroll de la page
             jQuery('#contentLayer').css('display', 'none');
-            jQuery('#pageContent').css('position', 'relative');
+            jQuery('html').css('position', 'relative');
+
+        jQuery('html').css('top', '0px'); 
+        $(window).scrollTop(offsetY);
+        // Reset the overlay scroll position to the top
+        $('html').scrollTop(0);
 
             //Activation du scroll sur les mobiles
             jQuery('#pageContent').unbind('touchmove');
