@@ -16,6 +16,8 @@ jQuery(document).ready(function () {
 
             jQuery('html').css('top', -offsetY + 'px');
 
+            jQuery('#header').css('top', offsetY + 'px');
+
             jQuery('#contentLayer').css('display', 'block');
             jQuery('#contentLayer').css('position', 'fixed');
             
@@ -27,7 +29,8 @@ jQuery(document).ready(function () {
             jQuery('#contentLayer').addClass('open');
             //Ouverture du contenu de la page : décalage vers la gauche
             jQuery('#pageContent').addClass('open');
-            
+                    
+
            
 
             
@@ -59,6 +62,7 @@ jQuery(document).ready(function () {
                 jQuery('#menu-hamburger').css('opacity', 0);
                 jQuery('#pageContent').removeClass('close');
                 jQuery('#menu-hamburger').css('display', 'none');
+
                 menuOuvert = false;
             }, 300);
 
@@ -66,10 +70,12 @@ jQuery(document).ready(function () {
             jQuery('#contentLayer').css('display', 'none');
             jQuery('html').css('position', 'relative');
 
-        jQuery('html').css('top', '0px'); 
-        $(window).scrollTop(offsetY);
-        // Reset the overlay scroll position to the top
-        $('html').scrollTop(0);
+            jQuery('#header').css('top', 0 + 'px');
+
+            jQuery('html').css('top', '0px'); 
+            $(window).scrollTop(offsetY);
+            // Reset the overlay scroll position to the top
+            //$('html').scrollTop(0);
 
             //Activation du scroll sur les mobiles
             jQuery('#pageContent').unbind('touchmove');
