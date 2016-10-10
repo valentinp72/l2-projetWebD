@@ -142,13 +142,18 @@ body {
 
 
 
+#header li.actif a{
+	color: white;
+	padding-bottom: 1px;
+	border-bottom: solid 1px;
+}
+
+
 #header li:hover a {
 	color: black;
 }
 
-#header li.actif a{
-	color: red;
-}
+
 
 #header .separator {
 	color: white;
@@ -193,7 +198,7 @@ body {
 	display: none;
 	position: fixed;
 	opacity: 0;
-	background-color: #cccccc;
+	background-color: #bbbbbb;
 	top: 0;
 	right: 0;
 	width: 200px;
@@ -259,8 +264,8 @@ body {
 #hierarchie ul {
 	display: inline-block;
 	background-color: #e4e4e4;
-    border-radius: 10px;
-    padding: 20px;
+    	border-radius: 10px;
+    	padding: 20px;
 }
 
 @media all and (max-width: 1000px) {
