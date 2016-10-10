@@ -309,7 +309,12 @@ body {
 	font-family: "Open Sans";
 	margin: 50px;
 }
-
+@media all and (max-width: 500px) {
+	#content {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
 
 
 
