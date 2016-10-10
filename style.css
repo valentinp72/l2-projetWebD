@@ -142,10 +142,13 @@ body {
 
 
 
-#header li.liens:hover a {
+#header li:hover a {
 	color: black;
 }
 
+#header li.actif a{
+	color: red;
+}
 
 #header .separator {
 	color: white;
