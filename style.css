@@ -142,13 +142,18 @@ body {
 
 
 
+#header li.actif a{
+	color: white;
+	padding-bottom: 1px;
+	border-bottom: solid 1px;
+}
+
+
 #header li:hover a {
 	color: black;
 }
 
-#header li.actif a{
-	color: red;
-}
+
 
 #header .separator {
 	color: white;
