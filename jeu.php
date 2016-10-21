@@ -1,11 +1,10 @@
 <?php
 	$titrePage = "Jeu";
-	
+
 	$nomJeu = "Monopoly";
 	include('header.php');
 	include('hierarchie.php')
 ?>
-
 
 
 <div id="titre"><?php echo $nomJeu ?> </div>
