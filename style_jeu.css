@@ -1,6 +1,20 @@
 @media all and (min-width: 1001px) {
+	#titre {
+		text-align: center;
+		color: #cc0000;
+		font-family: "Open Sans";
+		font-size: 24pt;
+	}
 
+	#imageDeJeu {
+		float:right;
+		margin-right: 20px;
+		text-align: right;
+	}
 
+	#content {
+		
+	}
 }
 
 @media all and (max-width: 1000px) {
@@ -14,12 +28,10 @@
 		margin: 20px;
 		text-align: center;
 	}
-
-	#imageDeJeu img {
-		width: 500px;
-		max-width: 100%;
-		height: auto;
-	}
 }
 
-
+#imageDeJeu img {
+	width: 500px;
+	max-width: 100%;
+	height: auto;
+}
