@@ -21,6 +21,14 @@
 
 	<body>
 
+		<?php
+
+		$hierarchie = explode("/",$_SERVER["REQUEST_URI"]);
+		$itemArray = explode(".php", $itemHier);
+		$nomSansExt = $itemArray[0];
+
+		 ?>
+
 		<div id="menu-hamburger">
 			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
 			<ul>
