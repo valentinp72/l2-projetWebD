@@ -1,12 +1,13 @@
 <?php
 	$titrePage = "Jeu";
+	$nomJeu = "monopoly";
 	include('header.php');
 	include('hierarchie.php')
 ?>
 
 
 
-<div id="titre">Monopoly</div>
+<div id="titre"><?php echo $nomJeu ?> </div>
 
 <div id="imageDeJeu">
 	<img src="media/images_catalogue/monopoly.jpg" alt="illustration monopoly"/>
