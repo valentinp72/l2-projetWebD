@@ -22,7 +22,7 @@
 	<body>
 
 		<div id="menu-hamburger">
-			<div id="titreHamburger"><a href="index.html">LudoTEK</a></div>
+			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
 			<ul>
 				<li><a href="catalogue.php">Catalogue</a></li>
 				<li class="active"><a href="compte.php">Mon compte</a></li>
@@ -40,7 +40,7 @@
 			<div id="header">
 
 				<div id="titreMenu">
-					<a href="index.html">LudoTEK</a>
+					<a href="index.php">LudoTEK</a>
 				</div>
 
 				<ul>
