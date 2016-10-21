@@ -3,7 +3,7 @@
 <html lang="fr">
 
 	<head>
-		<title>Ludothèque | <?php echo $titrePage; ?></title>
+		<title>Ludothèque | <?php echo $titrePage; if(isset($nomJeu)) echo " : " . $nomJeu ?></title>
 		<meta charset="UTF-8">
 		<link rel="icon" type="image/x-icon" href="media/favicon.ico" />
 		<link rel="stylesheet" type="text/css" href="style.css" media="all" />
