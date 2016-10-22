@@ -41,9 +41,14 @@ include('hierarchie.php')
 			$sujet = "Nouveau mail sur ludoTEK !";
 			$headers = "From: " . $_POST["mail"] . "\r\n";
 
-			$retour = mail($destinataire,$sujet,$_POST["message"]);
-			echo $retour;
-			echo "Votre mail a bien été envoyé aux administrateurs !";
+			$retour = mail($destinataire,$sujet,$_POST["message"],$headers);
+
+			if($retour){
+				echo "Votre mail a bien été envoyé aux administrateurs !";
+			}
+			else{
+				echo "Erreur dans l'envoi du mail. Veuillez ré-essayer plus tard."
+			}
 
 		}
 
