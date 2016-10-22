@@ -37,6 +37,45 @@ body {
 	flex-direction: column;
 }
 
+.bold {
+	font-weight: bold;
+}
+form#contact label {
+	display: block;
+	text-align: center;
+}
+form#contact input{
+	text-align: center;
+	font-family: "Open Sans";
+	font-size: 13pt;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	border:1px solid #cc0000;
+	background-color: white;
+	border-radius:5px;
+	margin-bottom: 20px;
+}
+form#contact input#submit{
+	cursor: pointer;
+	color: #cc0000;
+	background-color: #dddddd;
+}
+form#contact textarea {
+	font-family: "Open Sans";
+	font-size: 13pt;
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-bottom: 20px;
+	max-width: 100%;
+	margin-top: 10px;
+	border:1px solid #cc0000;
+	border-radius:5px;
+	margin-bottom: 20px;
+}
+
 /* Contenu de toute la page, permet de fixer le footer en bas, même si la page est plus courte que l'écran */
 #main {
 	background-color: white;
@@ -72,33 +111,33 @@ body {
   font-style: normal;
 }
 
-.flaticon-back:before { 
-	content: "\f100"; 
+.flaticon-back:before {
+	content: "\f100";
 }
-.flaticon-error:before { 
-	content: "\f101"; 
+.flaticon-error:before {
+	content: "\f101";
 }
-.flaticon-heart:before { 
-	content: "\f102"; 
+.flaticon-heart:before {
+	content: "\f102";
 }
-.flaticon-house:before { 
-	content: "\f103"; 
+.flaticon-house:before {
+	content: "\f103";
 }
-.flaticon-magnifying-glass:before { 
-	content: "\f104"; 
+.flaticon-magnifying-glass:before {
+	content: "\f104";
 }
-.flaticon-next:before { 
-	content: "\f105"; 
+.flaticon-next:before {
+	content: "\f105";
 }
-.flaticon-success:before { 
-	content: "\f106"; 
+.flaticon-success:before {
+	content: "\f106";
 }
-.flaticon-shopping-cart:before { 
-	content: "\f106"; 
+.flaticon-shopping-cart:before {
+	content: "\f106";
 }
 
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
 	font-family: Flaticon;
 	font-size: 20px;
 	font-style: normal;
@@ -165,7 +204,7 @@ body {
 	margin-bottom: 20px;
 	margin-right: 20px;
 	margin-top: auto;
-} 
+}
 #header #hamburger div{
 	background-color: #fff;
 	height: 4px;
@@ -363,6 +402,3 @@ body {
 
 	}
 }
-
-
-
