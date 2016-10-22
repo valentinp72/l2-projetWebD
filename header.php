@@ -27,7 +27,6 @@
 		$nomSansExt = str_replace(".php", "", $hierarchie[1]);
 
 		?>
-
 		<div id="menu-hamburger">
 			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
 			<ul>

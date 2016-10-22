@@ -4,15 +4,21 @@ jQuery(document).ready(function () {
 
     //Ouverture du menu
     jQuery("#hamburger").click(function () {
-        
+
         if(menuOuvert == false) { //Permet d'empecher la ré-ouverture du menu si il est déjà ouvert
             //On affiche le menu
             jQuery('#menu-hamburger').css('opacity', 1);
             jQuery('#menu-hamburger').css('display', 'block');
 
+            //On enregistre l'offset en y de la page
             offsetY = window.pageYOffset;
-            //On fixe le contenu de la page, pour empecher le scroll
+            //On empeche le scroll
+            jQuery('html').css('overflow', 'hidden');
+            jQuery('html').css('height', '100%');
+            jQuery('html').css('width', '100%');
             jQuery('html').css('position', 'fixed');
+
+
 
             jQuery('html').css('top', -offsetY + 'px');
 
@@ -20,20 +26,20 @@ jQuery(document).ready(function () {
 
             jQuery('#contentLayer').css('display', 'block');
             jQuery('#contentLayer').css('position', 'fixed');
-            
 
 
 
-        
+
+
             //Ouverture de l'anti-scroll : décalage vers la gauche, permet de suivre le reste du contenu pour pouvroir cliquer dessus
             jQuery('#contentLayer').addClass('open');
             //Ouverture du contenu de la page : décalage vers la gauche
             jQuery('#pageContent').addClass('open');
-                    
 
-           
 
-            
+
+
+
             //Désactivation du scroll sur les mobiles
             jQuery('#pageContent').bind('touchmove', function (e) {
                 e.preventDefault()
@@ -41,9 +47,9 @@ jQuery(document).ready(function () {
             menuOuvert = true;
 
         }
-        
 
-        
+
+
 
     });
 
@@ -68,18 +74,21 @@ jQuery(document).ready(function () {
 
             //On ré-autorise le scroll de la page
             jQuery('#contentLayer').css('display', 'none');
+            jQuery('html').css('overflow', 'visible');
+            jQuery('html').css('height', '100%');
+            jQuery('html').css('width', '100%');
             jQuery('html').css('position', 'relative');
 
             jQuery('#header').css('top', 0 + 'px');
 
-            jQuery('html').css('top', '0px'); 
+            jQuery('html').css('top', '0px');
             $(window).scrollTop(offsetY);
             // Reset the overlay scroll position to the top
             //$('html').scrollTop(0);
 
             //Activation du scroll sur les mobiles
             jQuery('#pageContent').unbind('touchmove');
-        } 
+        }
 
     });
 
