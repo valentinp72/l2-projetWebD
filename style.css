@@ -85,6 +85,12 @@ form#contact textarea {
 	*/
 	min-height: calc(100vh - 170px);
 }
+@media all and (max-width: 750px) {
+	#main{
+		/* On adapte la taille minimale de la page par rapport à la hauteur du footer*/
+		min-height: calc(100vh - 400px);
+	}
+}
 #pageContent {
 	background-color: white;
 }
