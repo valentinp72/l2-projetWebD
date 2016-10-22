@@ -25,7 +25,7 @@ include('hierarchie.php')
 				<input type="email" id="mail" name="mail" placeholder="Ex : bibi@exemple.com" value="<?php echo $_POST['mail']; ?>" required>
 			</p>
 			<p>
-				<label for="sujet">Sujet du mail : </label>
+				<label for="sujet">Sujet : </label>
 				<input id="sujet" name="sujet" placeholder="Ex : Problème de réservation" value="<?php echo $_POST['sujet']; ?>" required>
 			</p>
 			<p>
