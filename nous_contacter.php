@@ -40,10 +40,13 @@ include('hierarchie.php')
 			$destinataire = "valentinpelloin@gmail.com";
 			$sujet = "Nouveau mail sur ludoTEK !";
 			$headers = "From: " . $_POST["mail"];
-
-			mail($destinataire,$sujet,$_POST["message"],$headers);
-
+			error_reporting(-1);
+			ini_set('display_errors', 'On');
+			set_error_handler("var_dump");
+			$retour = mail($destinataire,$sujet,$_POST["message"],$headers);
+			echo $retour;
 			echo "Votre mail a bien été envoyé aux administrateurs !";
+
 		}
 
 
