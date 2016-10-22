@@ -80,6 +80,10 @@ form#contact textarea {
 #main {
 	background-color: white;
 	flex: 1;
+	/* C'est pas très propre d'utiliser la fonction calc, mais nous n'avons pas trouvé mieux pour fixer le footer en bas de la page :
+			En effet, avec le header qui est fixé en haut et qui prend une certaine hauteur dans la page, nous ne pouvons pas dire que notre page doit au minimum faire 100% de la hauteur de l'écran (100vh) pour fixer en bas le footer, sinon, une scrollbar apparait sur les pages où le contenu ne prend pas toute la hauteur de l'écran (à cause du header qui prend environ 170px en plus sur le contenu).
+	*/
+	min-height: calc(100vh - 170px);
 }
 #pageContent {
 	background-color: white;
