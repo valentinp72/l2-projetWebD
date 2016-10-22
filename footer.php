@@ -11,7 +11,8 @@
     <li><a href="a_propos.php">À propos</a></li>
       <li class="separator">|</li>
     <li><a href="nous_contacter.php">Nous contacter</a></li>
-
+      <li class="separator">|</li>
+    <li><a href="https://github.com/valentinp72/projetWebD"><span class="flaticon-circle"> Github</span></a></li>
   </ul>
 
 </div>

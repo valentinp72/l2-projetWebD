@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 24/09/2016 16:15
+    Creation date: 22/10/2016 16:19
     */
 
     @font-face {
@@ -37,17 +37,21 @@
     }
 
     .flaticon-back:before { content: "\f100"; }
-.flaticon-error:before { content: "\f101"; }
-.flaticon-heart:before { content: "\f102"; }
-.flaticon-house:before { content: "\f103"; }
-.flaticon-magnifying-glass:before { content: "\f104"; }
-.flaticon-next:before { content: "\f105"; }
-.flaticon-success:before { content: "\f106"; }
+.flaticon-circle:before { content: "\f101"; }
+.flaticon-error:before { content: "\f102"; }
+.flaticon-heart:before { content: "\f103"; }
+.flaticon-house:before { content: "\f104"; }
+.flaticon-magnifying-glass:before { content: "\f105"; }
+.flaticon-next:before { content: "\f106"; }
+.flaticon-shopping-cart:before { content: "\f107"; }
+.flaticon-success:before { content: "\f108"; }
     
     $font-Flaticon-back: "\f100";
-    $font-Flaticon-error: "\f101";
-    $font-Flaticon-heart: "\f102";
-    $font-Flaticon-house: "\f103";
-    $font-Flaticon-magnifying-glass: "\f104";
-    $font-Flaticon-next: "\f105";
-    $font-Flaticon-success: "\f106";
+    $font-Flaticon-circle: "\f101";
+    $font-Flaticon-error: "\f102";
+    $font-Flaticon-heart: "\f103";
+    $font-Flaticon-house: "\f104";
+    $font-Flaticon-magnifying-glass: "\f105";
+    $font-Flaticon-next: "\f106";
+    $font-Flaticon-shopping-cart: "\f107";
+    $font-Flaticon-success: "\f108";

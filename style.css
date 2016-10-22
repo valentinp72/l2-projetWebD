@@ -115,25 +115,28 @@ form#contact textarea {
 	content: "\f100";
 }
 .flaticon-error:before {
-	content: "\f101";
-}
-.flaticon-heart:before {
 	content: "\f102";
 }
-.flaticon-house:before {
+.flaticon-heart:before {
 	content: "\f103";
 }
-.flaticon-magnifying-glass:before {
+.flaticon-house:before {
 	content: "\f104";
 }
-.flaticon-next:before {
+.flaticon-magnifying-glass:before {
 	content: "\f105";
 }
-.flaticon-success:before {
+.flaticon-next:before {
 	content: "\f106";
 }
+.flaticon-success:before {
+	content: "\f108";
+}
 .flaticon-shopping-cart:before {
-	content: "\f106";
+	content: "\f107";
+}
+.flaticon-circle:before {
+	content: "\f101";
 }
 
 
