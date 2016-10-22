@@ -47,7 +47,7 @@ include('hierarchie.php')
 				echo "Votre mail a bien été envoyé aux administrateurs !";
 			}
 			else{
-				echo "Erreur dans l'envoi du mail. Veuillez ré-essayer plus tard."
+				echo "Erreur dans l'envoi du mail. Veuillez ré-essayer plus tard.";
 			}
 
 		}
