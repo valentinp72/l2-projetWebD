@@ -24,18 +24,17 @@
 		<?php
 
 		$hierarchie = explode("/",$_SERVER["REQUEST_URI"]);
-		$itemArray = explode(".php", $itemHier);
-		$nomSansExt = $itemArray[0];
+		$nomSansExt = str_replace(".php", "", $hierarchie[1]);
 
-		 ?>
+		?>
 
 		<div id="menu-hamburger">
 			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
 			<ul>
-				<li><a href="catalogue.php">Catalogue</a></li>
-				<li class="active"><a href="compte.php">Mon compte</a></li>
-				<li><a href="recherche.php">Recherhe</a></li>
-				<li><a href="panier.php">Panier</a></li>
+				<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='active'"; ?>><a href="catalogue.php">Catalogue</a></li>
+				<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="compte.php">Mon compte</a></li>
+				<li <?php if($nomSansExt == "recherche") echo "class='active'"; ?>><a href="recherche.php">Recherhe</a></li>
+				<li <?php if($nomSansExt == "panier") echo "class='active'"; ?>><a href="panier.php">Panier</a></li>
 			</ul>
 		</div>
 
@@ -52,12 +51,12 @@
 				</div>
 
 				<ul>
-					<li><a href="catalogue.php">Catalogue</a></li>
+					<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='actif'"; ?>><a href="catalogue.php">Catalogue</a></li>
 					<li class="separator">|</li>
-					<li class="actif"><a href="compte.php">Mon compte</a></li>
+					<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="compte.php">Mon compte</a></li>
 					<li class="separator">|</li>
-					<li><a href="recherche.php"><span class="flaticon-magnifying-glass"></span></a></li>
-					<li><a href="panier.php"><span class="flaticon-shopping-cart"></span></a></li>
+					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="recherche.php"><span class="flaticon-magnifying-glass"></span></a></li>
+					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="panier.php"><span class="flaticon-shopping-cart"></span></a></li>
 
 				</ul>
 
