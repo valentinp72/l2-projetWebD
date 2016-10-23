@@ -4,7 +4,6 @@ $cacherHierarchie = true;
 include('header.php');
 include('hierarchie.php')
 ?>
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <div id="content">
 
 	<div id="slideshow">
@@ -13,10 +12,12 @@ include('hierarchie.php')
 		<img class="slide" src="media/slides/jeu1.jpg" alt="Jeu en bois">
 		<img class="slide" src="media/slides/jeu2.jpg" alt="Jeu en bois">
 
-  	<a class="slideButtonLeft" onclick="plusDivs(-1)">&#10094;</a>
-  	<a class="slideButtonRight" onclick="plusDivs(1)">&#10095;</a>
+  	<a id="slideButtonLeft" class="slideButton"  onclick="plusDivs(-1)">&#10094;</a>
+  	<a id="slideButtonRight" class="slideButton" onclick="plusDivs(1)">&#10095;</a>
 
 	</div>
+
+	<script src="slideshow.js"></script>
 
 
 	<p>
