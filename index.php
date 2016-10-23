@@ -4,8 +4,20 @@ $cacherHierarchie = true;
 include('header.php');
 include('hierarchie.php')
 ?>
-
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <div id="content">
+
+	<div id="slideshow">
+
+  	<img class="slide" src="media/slides/des.jpg"  alt="Set de dés">
+		<img class="slide" src="media/slides/jeu1.jpg" alt="Jeu en bois">
+		<img class="slide" src="media/slides/jeu2.jpg" alt="Jeu en bois">
+
+  	<a class="slideButtonLeft" onclick="plusDivs(-1)">&#10094;</a>
+  	<a class="slideButtonRight" onclick="plusDivs(1)">&#10095;</a>
+
+	</div>
+
 
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.

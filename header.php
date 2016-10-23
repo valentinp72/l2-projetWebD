@@ -16,7 +16,8 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 
-    	<script src="menu.js"></script>
+		<script src="slideshow.js"></script>
+    <script src="menu.js"></script>
 	</head>
 
 	<body>

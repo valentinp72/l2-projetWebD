@@ -168,6 +168,7 @@ form#contact textarea {
 /* Barre du menu */
 #header {
 	position: fixed;
+	z-index: 2;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
@@ -387,6 +388,19 @@ form#contact textarea {
 	width: 100%;
 	max-width: 800px;
 	height: auto;
+}
+
+
+
+/* ========= */
+/* SLIDESHOW */
+/* ========= */
+
+#slideshow {
+
+}
+img.slide {
+
 }
 
 
