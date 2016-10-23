@@ -70,3 +70,6 @@
 
 
 			<div id="main">
+				<noscript>
+						<h2 class="WARNING">Attention : Javascript n'est pas activé, le site ne fonctionnera pas correctement</h2>
+				</noscript>

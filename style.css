@@ -3,7 +3,7 @@
 /* ======= */
 
 /* Police Open Sans, lien google font pour + de rapidité et de compatibilité */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800');
 
 /* Ajout d'une police pour le logo */
 @font-face {
@@ -16,9 +16,7 @@
 }
 
 
-
-
-
+/* --------------------------------------------------------- */
 
 
 html, body {
@@ -35,47 +33,26 @@ body {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
+	font-family: "Open Sans";
 }
 
 .bold {
 	font-weight: bold;
 }
-form#contact label {
-	display: block;
-	text-align: center;
-}
-form#contact input{
-	text-align: center;
-	font-family: "Open Sans";
-	font-size: 13pt;
-	padding-right: 5px;
-	width: 99%;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-top: 10px;
-	border:1px solid #cc0000;
-	background-color: white;
-	border-radius:5px;
-	margin-bottom: 20px;
-}
-form#contact input#submit{
-	cursor: pointer;
+
+h1,h2,h3,h4,h5,h6 {
 	color: #cc0000;
-	background-color: #dddddd;
 }
-form#contact textarea {
-	font-family: "Open Sans";
-	font-size: 13pt;
-	width: 100%;
-	padding-top: 20px;
-	padding-left: 5px;
-	padding-bottom: 20px;
-	max-width: 100%;
-	margin-top: 10px;
-	border:1px solid #cc0000;
-	border-radius:5px;
-	margin-bottom: 20px;
+
+hr{
+	border: 0;
+  height: 1px;
+  background: #cccccc;
 }
+
+
+/* --------------------------------------------------------- */
+
 
 /* Contenu de toute la page, permet de fixer le footer en bas, même si la page est plus courte que l'écran */
 #main {
@@ -107,6 +84,8 @@ form#contact textarea {
     z-index: 5;
 }
 
+
+/* --------------------------------------------------------- */
 
 /* ====== */
 /* ICONES */
@@ -159,7 +138,7 @@ form#contact textarea {
 
 
 
-
+/* --------------------------------------------------------- */
 
 /* ==== */
 /* MENU */
@@ -301,6 +280,7 @@ form#contact textarea {
 }
 
 
+/* --------------------------------------------------------- */
 
 /* ========== */
 /* HIERARCHIE */
@@ -360,7 +340,16 @@ form#contact textarea {
 	}
 }
 
+h2.WARNING{
+	margin-top: 80px;
+	text-align: center;
+	font-family: "Open Sans";
+	font-weight: bold;
+	color: #cc0000;
+}
 
+
+/* --------------------------------------------------------- */
 
 /* ======= */
 /* CONTENU */
@@ -390,7 +379,7 @@ form#contact textarea {
 	height: auto;
 }
 
-
+/* --------------------------------------------------------- */
 
 /* ========= */
 /* SLIDESHOW */
@@ -428,6 +417,53 @@ img.slide {
 #slideButtonRight{
 	right: 30px;
 }
+
+
+/* --------------------------------------------------------- */
+
+/* ======= */
+/* CONTACT */
+/* ======= */
+
+form#contact label {
+	display: block;
+	text-align: center;
+}
+form#contact input{
+	text-align: center;
+	font-family: "Open Sans";
+	font-size: 13pt;
+	padding-right: 5px;
+	width: 99%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+	border:1px solid #cc0000;
+	background-color: white;
+	border-radius:5px;
+	margin-bottom: 20px;
+}
+form#contact input#submit{
+	cursor: pointer;
+	color: #cc0000;
+	background-color: #dddddd;
+}
+form#contact textarea {
+	font-family: "Open Sans";
+	font-size: 13pt;
+	width: 100%;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-bottom: 20px;
+	max-width: 100%;
+	margin-top: 10px;
+	border:1px solid #cc0000;
+	border-radius:5px;
+	margin-bottom: 20px;
+}
+
+
+/* --------------------------------------------------------- */
 
 /* ====== */
 /* FOOTER */
