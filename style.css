@@ -378,6 +378,17 @@ form#contact textarea {
 }
 
 
+#page404 {
+	text-align:center;
+	display:block;
+	margin-top: 80px;
+}
+#page404 img {
+	width: 100%;
+	max-width: 800px;
+	height: auto;
+}
+
 
 /* ====== */
 /* FOOTER */

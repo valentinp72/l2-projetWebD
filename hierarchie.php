@@ -1,4 +1,9 @@
 <div id="hierarchie">
+
+<?php
+  if(!isset($cacherHierarchie) or $cacherHierarchie == false){
+
+?>
   <ul>
     <li><a href="index.php">LudoTEK</a></li>
   <?php
@@ -44,4 +49,8 @@
    ?>
 
  </ul>
+
+<?php
+ }
+?>
 </div>

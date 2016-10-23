@@ -1,5 +1,6 @@
 <?php
 $titrePage = "Accueil";
+$cacherHierarchie = true;
 include('header.php');
 include('hierarchie.php')
 ?>
