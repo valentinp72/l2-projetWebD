@@ -41,7 +41,7 @@ include('hierarchie.php')
 		}
 		else{
 
-			$destinataire = "valentinpelloin@gmail.com";
+			$destinataire = "valentinpelloin@gmail.com, titouan.teyssier@gmail.com";
 			$message = $_POST["message"] . "\r\n\r\n------\r\nCe mail a été envoyé depuis le site http://ludotheque.vlntn.pw/";
 			$headers = "From: " . $_POST["mail"] . "\r\n";
 
