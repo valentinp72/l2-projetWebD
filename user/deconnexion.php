@@ -3,7 +3,7 @@ session_start();
 $_SESSION = array();
 session_destroy();
 
-$titrePage = "Deconnexion";
+$titrePage = "Déconnexion";
 $rootURL = "../";
 include($rootURL . '_header.php');
 include($rootURL . '_hierarchie.php')

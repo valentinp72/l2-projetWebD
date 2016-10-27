@@ -2,7 +2,7 @@
 //Uniquement là en attendant la BDD
 //Génération du mot de passe hashé avec password_hash
 $tempPassword = password_hash("password", PASSWORD_DEFAULT);
-$tempEmail = "blabla@test.fr";
+$tempEmail = "mail";
 
 session_start();
 if( $_POST['email'] == $tempEmail and password_verify($_POST['password'], $tempPassword) ){

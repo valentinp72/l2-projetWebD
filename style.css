@@ -105,30 +105,32 @@ hr{
 	content: "\f100";
 }
 .flaticon-error:before {
-	content: "\f102";
-}
-.flaticon-heart:before {
 	content: "\f103";
 }
-.flaticon-house:before {
-	content: "\f104";
-}
-.flaticon-magnifying-glass:before {
+.flaticon-heart:before {
 	content: "\f105";
 }
-.flaticon-next:before {
+.flaticon-house:before {
 	content: "\f106";
 }
-.flaticon-success:before {
+.flaticon-magnifying-glass:before {
+	content: "\f107";
+}
+.flaticon-next:before {
 	content: "\f108";
 }
+.flaticon-success:before {
+	content: "\f109";
+}
 .flaticon-shopping-cart:before {
-	content: "\f107";
+	content: "\f102";
 }
 .flaticon-circle:before {
 	content: "\f101";
 }
-
+.flaticon-exit:before {
+	content: "\f104";
+}
 
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
 	font-family: Flaticon;

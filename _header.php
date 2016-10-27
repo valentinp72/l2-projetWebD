@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <!-- HEADER.PHP, page à appeler par chaque page du site. La variable $title doit être déclarée auparavant -->
 <html lang="fr">
@@ -27,14 +31,20 @@
 		<?php
 
 		$hierarchie = explode("/",$_SERVER["REQUEST_URI"]);
-		$nomSansExt = str_replace(".php", "", $hierarchie[1]);
+		$nomSansExt = str_replace(".php", "", $hierarchie[count($hierarchie)-1]);
 
 		?>
 		<div id="menu-hamburger">
-			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
+			<div id="titreHamburger"><a href="<?php echo $rootURL; ?>index.php">LudoTEK</a></div>
 			<ul>
 				<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
-				<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
+				<?php if(isset($_SESSION['userID'])){ ?>
+					<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
+				<?php } else { ?>
+					<li <?php if($nomSansExt == "connexion") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>user/connexion.php">Connexion</a></li>
+				<?php } ?>
+
+
 				<li <?php if($nomSansExt == "recherche") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>recherche.php">Recherhe</a></li>
 				<li <?php if($nomSansExt == "panier") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>panier.php">Panier</a></li>
 			</ul>
@@ -49,17 +59,23 @@
 			<div id="header">
 
 				<div id="titreMenu">
-					<a href="index.php">LudoTEK</a>
+					<a href="<?php echo $rootURL; ?>index.php">LudoTEK</a>
 				</div>
 
 				<ul>
 					<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
 					<li class="separator">|</li>
-					<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
+					<?php if(isset($_SESSION['userID'])){ ?>
+						<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
+					<?php } else { ?>
+						<li <?php if($nomSansExt == "connexion") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/connexion.php">Connexion</a></li>
+					<?php } ?>
 					<li class="separator">|</li>
-					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>recherche.php"><span class="flaticon-magnifying-glass"></span></a></li>
-					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>panier.php"><span class="flaticon-shopping-cart"></span></a></li>
-
+					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>recherche.php" title="Recherche"><span class="flaticon-magnifying-glass"></span></a></li>
+					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>panier.php" title="Panier"><span class="flaticon-shopping-cart"></span></a></li>
+					<?php if(isset($_SESSION['userID'])) {?>
+						<li <?php if($nomSansExt == "deconnexion") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/deconnexion.php" title="Déconnexion"><span class="flaticon-exit"></span></a></li>
+					<?php } ?>
 				</ul>
 
 			    <div id="hamburger">

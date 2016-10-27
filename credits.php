@@ -14,7 +14,7 @@ include('_hierarchie.php')
 			<li>Les icônes proviennent du site <a href="http://www.flaticon.com">Flaticon</a> :
 				<ul>
 					<li>Github : <a href="http://www.flaticon.com/free-icon/github-logo_25231">designed by Dave Gandy</a> from Flaticon.</li>
-					<li>Cart, Search, House, Heart, Left Arrow, Right Arrow : <a href="http://www.flaticon.com/authors/gregor-cresnar">designed by Gregor Cresnar</a> from Flaticon.</li>
+					<li>Cart, Search, House, Heart, Left Arrow, Right Arrow, Logout : <a href="http://www.flaticon.com/authors/gregor-cresnar">designed by Gregor Cresnar</a> from Flaticon.</li>
 					<li>Success, Error : <a href="http://www.flaticon.com/authors/madebyoliver">designed by Madebyoliver</a> from Flaticon.</li>
 				</ul>
 			</li>
