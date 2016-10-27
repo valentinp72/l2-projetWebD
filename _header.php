@@ -34,7 +34,7 @@
 			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
 			<ul>
 				<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
-				<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>compte.php">Mon compte</a></li>
+				<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
 				<li <?php if($nomSansExt == "recherche") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>recherche.php">Recherhe</a></li>
 				<li <?php if($nomSansExt == "panier") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>panier.php">Panier</a></li>
 			</ul>
@@ -55,7 +55,7 @@
 				<ul>
 					<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
 					<li class="separator">|</li>
-					<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>compte.php">Mon compte</a></li>
+					<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
 					<li class="separator">|</li>
 					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>recherche.php"><span class="flaticon-magnifying-glass"></span></a></li>
 					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>panier.php"><span class="flaticon-shopping-cart"></span></a></li>
