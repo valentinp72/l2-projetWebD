@@ -1,7 +1,7 @@
 <?php
 $titrePage = "Mentions légales";
-include('header.php');
-include('hierarchie.php')
+include('_header.php');
+include('_hierarchie.php')
 ?>
 
 <div id="content">
@@ -35,4 +35,4 @@ include('hierarchie.php')
 
 </div>
 
-<?php include('footer.php'); ?>
+<?php include('_footer.php'); ?>

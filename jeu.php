@@ -2,8 +2,8 @@
 	$titrePage = "Jeu";
 
 	$nomJeu = "Monopoly";
-	include('header.php');
-	include('hierarchie.php')
+	include('_header.php');
+	include('_hierarchie.php')
 ?>
 
 
@@ -44,4 +44,4 @@
 	</p>
 </div>
 
-<?php include('footer.php'); ?>
+<?php include('_footer.php'); ?>
