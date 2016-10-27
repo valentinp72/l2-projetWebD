@@ -4,13 +4,13 @@
   <ul>
     <li>© LudoTEK 2016</li>
       <li class="separator">|</li>
-    <li><a href="mentions_legales.php">Mentions légales</a></li>
+    <li><a href="<?php echo $rootURL; ?>mentions_legales.php">Mentions légales</a></li>
       <li class="separator">|</li>
-    <li><a href="credits.php">Crédits</a></li>
+    <li><a href="<?php echo $rootURL; ?>credits.php">Crédits</a></li>
       <li class="separator">|</li>
-    <li><a href="a_propos.php">À propos</a></li>
+    <li><a href="<?php echo $rootURL; ?>a_propos.php">À propos</a></li>
       <li class="separator">|</li>
-    <li><a href="nous_contacter.php">Nous contacter</a></li>
+    <li><a href="<?php echo $rootURL; ?>nous_contacter.php">Nous contacter</a></li>
       <li class="separator">|</li>
     <li><a href="https://github.com/valentinp72/projetWebD"><span class="flaticon-circle"> Github</span></a></li>
   </ul>

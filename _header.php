@@ -5,9 +5,12 @@
 	<head>
 		<title>Ludothèque | <?php echo $titrePage; if(isset($nomJeu)) echo " : " . $nomJeu ?></title>
 		<meta charset="UTF-8">
-		<link rel="icon" type="image/x-icon" href="media/favicon.ico" />
-		<link rel="stylesheet" type="text/css" href="style.css" media="all" />
-		<link rel="stylesheet" type="text/css" href="style_jeu.css" media="all" />
+		<link rel="icon" type="image/x-icon" href="<?php echo $rootURL; ?>media/favicon.ico" />
+		<!-- $rootURL represente le lien vers les fichiers header, footer, style, etc. Il n'est utile que pour les sous-répertoires (voir user/login.php par exemple)
+		On ne peut pas remplacer par juste '/' car cela représente la racine du serveur info.univ-lemans.fr
+		-->
+		<link rel="stylesheet" type="text/css" href="<?php echo $rootURL; ?>style.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $rootURL; ?>style_jeu.css" media="all" />
 
 		<!-- Corrige le zoom sur les mobiles -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -16,7 +19,7 @@
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     	<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
 
-    <script src="menu.js"></script>
+    <script src="<?php echo $rootURL; ?>menu.js"></script>
 	</head>
 
 	<body>
@@ -30,10 +33,10 @@
 		<div id="menu-hamburger">
 			<div id="titreHamburger"><a href="index.php">LudoTEK</a></div>
 			<ul>
-				<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='active'"; ?>><a href="catalogue.php">Catalogue</a></li>
-				<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="compte.php">Mon compte</a></li>
-				<li <?php if($nomSansExt == "recherche") echo "class='active'"; ?>><a href="recherche.php">Recherhe</a></li>
-				<li <?php if($nomSansExt == "panier") echo "class='active'"; ?>><a href="panier.php">Panier</a></li>
+				<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
+				<li <?php if($nomSansExt == "compte") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>compte.php">Mon compte</a></li>
+				<li <?php if($nomSansExt == "recherche") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>recherche.php">Recherhe</a></li>
+				<li <?php if($nomSansExt == "panier") echo "class='active'"; ?>><a href="<?php echo $rootURL; ?>panier.php">Panier</a></li>
 			</ul>
 		</div>
 
@@ -50,12 +53,12 @@
 				</div>
 
 				<ul>
-					<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='actif'"; ?>><a href="catalogue.php">Catalogue</a></li>
+					<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
 					<li class="separator">|</li>
-					<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="compte.php">Mon compte</a></li>
+					<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>compte.php">Mon compte</a></li>
 					<li class="separator">|</li>
-					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="recherche.php"><span class="flaticon-magnifying-glass"></span></a></li>
-					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="panier.php"><span class="flaticon-shopping-cart"></span></a></li>
+					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>recherche.php"><span class="flaticon-magnifying-glass"></span></a></li>
+					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>panier.php"><span class="flaticon-shopping-cart"></span></a></li>
 
 				</ul>
 

@@ -424,12 +424,16 @@ img.slide {
 /* ======= */
 /* CONTACT */
 /* ======= */
-
-form#contact label {
+form label {
 	display: block;
 	text-align: center;
 }
-form#contact input{
+form legend {
+	width: 100%;
+	margin-bottom: 50px;
+	text-align: center;
+}
+form input{
 	text-align: center;
 	font-family: "Open Sans";
 	font-size: 13pt;
@@ -443,12 +447,12 @@ form#contact input{
 	border-radius:5px;
 	margin-bottom: 20px;
 }
-form#contact input#submit{
+form input#submit{
 	cursor: pointer;
 	color: #cc0000;
 	background-color: #dddddd;
 }
-form#contact textarea {
+form textarea {
 	font-family: "Open Sans";
 	font-size: 13pt;
 	width: 100%;

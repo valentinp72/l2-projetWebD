@@ -5,7 +5,7 @@
 
 ?>
   <ul>
-    <li><a href="index.php">LudoTEK</a></li>
+    <li><a href="<?php echo $rootURL; ?>index.php">LudoTEK</a></li>
   <?php
     $hierarchie = explode("/",$_SERVER["REQUEST_URI"]);
 
@@ -18,7 +18,7 @@
         $nomSansExt = str_replace("_", " ", $itemArray[0]);
 
 
-        if($nomSansExt != "index"){ //Sur la page index, on n'a pas besoin d'afficher l'item
+        if($nomSansExt != "index" and $nomSansExt != "user"){ //Sur la page index, on n'a pas besoin d'afficher l'item
 
 
           if(substr($itemHier, 0, 7 ) === "jeu.php"){ //Si nous sommes sur la page jeu.php, on affiche manuellement le lien vers le catalogue
