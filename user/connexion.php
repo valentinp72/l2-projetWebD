@@ -15,7 +15,6 @@ if( $_POST['email'] == $tempEmail and password_verify($_POST['password'], $tempP
 $titrePage = "Connexion";
 $rootURL = "../";
 
-$_SERVER['DOCUMENT_ROOT'];
 
 include($rootURL . '_header.php');
 include($rootURL . '_hierarchie.php');

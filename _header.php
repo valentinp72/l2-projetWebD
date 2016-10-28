@@ -63,19 +63,28 @@ session_start();
 				</div>
 
 				<ul>
+
 					<li <?php if($nomSansExt == "catalogue" or $nomSansExt == "jeu") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>catalogue.php">Catalogue</a></li>
+
 					<li class="separator">|</li>
+
+
 					<?php if(isset($_SESSION['userID'])){ ?>
 						<li <?php if($nomSansExt == "compte") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/compte.php">Mon compte</a></li>
 					<?php } else { ?>
 						<li <?php if($nomSansExt == "connexion") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/connexion.php">Connexion</a></li>
 					<?php } ?>
+
 					<li class="separator">|</li>
+
 					<li <?php if($nomSansExt == "recherche") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>recherche.php" title="Recherche"><span class="flaticon-magnifying-glass"></span></a></li>
+
 					<li <?php if($nomSansExt == "panier") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>panier.php" title="Panier"><span class="flaticon-shopping-cart"></span></a></li>
+
 					<?php if(isset($_SESSION['userID'])) {?>
 						<li <?php if($nomSansExt == "deconnexion") echo "class='actif'"; ?>><a href="<?php echo $rootURL; ?>user/deconnexion.php" title="Déconnexion"><span class="flaticon-exit"></span></a></li>
 					<?php } ?>
+					
 				</ul>
 
 			    <div id="hamburger">
