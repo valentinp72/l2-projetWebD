@@ -1,21 +1,29 @@
 <?php
+echo "-2";
+
 //Uniquement là en attendant la BDD
 //Génération du mot de passe hashé avec password_hash
 $tempPassword = password_hash("password", PASSWORD_DEFAULT);
+echo "-1";
+
 $tempEmail = "mail";
+echo "0";
 
 session_start();
+echo "1.5";
+
 if( $_POST['email'] == $tempEmail and password_verify($_POST['password'], $tempPassword) ){
 
 	$_SESSION['userID'] = 1; // A REMPLACER PAR UNE REQUETE MYSQL POUR ALLER RECUPERER L'ID DE L'UTILISATEUR
 	header("Location: compte.php");
 
 }
+echo "1";
 
 $titrePage = "Connexion";
 $rootURL = "../";
 
-
+echo "2";
 include($rootURL . '_header.php');
 include($rootURL . '_hierarchie.php');
 
