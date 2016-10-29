@@ -1,22 +1,32 @@
 <?php
 
-//Uniquement là en attendant la BDD
-//Génération du mot de passe hashé avec password_hash
-$tempPassword = password_hash("password", PASSWORD_DEFAULT);
+$rootURL = "../";
 
-$tempEmail = "mail";
+require $rootURL . '_connexionBDD.php'; // Connexion à la BDD
+
 
 session_start();
 
-if( $_POST['email'] == $tempEmail and password_verify($_POST['password'], $tempPassword) ){
+$emailPost    = mysql_real_escape_string($_POST['email']);    // On empêche quelques injections SQL
+$passwordPost = mysql_real_escape_string($_POST['password']); // en utilisant une fonction d'échappement
 
-	$_SESSION['userID'] = 1; // A REMPLACER PAR UNE REQUETE MYSQL POUR ALLER RECUPERER L'ID DE L'UTILISATEUR
-	header("Location: compte.php");
 
+$requete = mysql_query('SELECT motDePasse, ID FROM Clients WHERE email = "'. $emailPost .'"');
+if(!$requete) {
+    die('Erreur dans la requête : ' . mysql_error());
 }
 
+$valeur = mysql_fetch_array($requete);
+
+if(password_verify($passwordPost, $valeur['motDePasse'])){
+	$_SESSION['userID'] = $valeur['motDePasse'];
+	header("Location: compte.php"); //On redirige l'utilisateur vers son compte une fois connecté
+}
+
+
+
 $titrePage = "Connexion";
-$rootURL = "../";
+
 
 
 include($rootURL . '_header.php');

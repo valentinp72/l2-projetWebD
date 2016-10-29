@@ -1,7 +1,7 @@
 <?php
 $titrePage = "Gabarit";
 include('_header.php');
-include('_hierarchie.php')
+include('_hierarchie.php');
 ?>
 
 <div id="content">
