@@ -1,10 +1,19 @@
 <?php
 
-echo "string";
-
 include('../_connexionBDD.php');
 
-echo "string2";
+$resultat = mysql_query('SELECT * FROM Clients');
+if (!$resultat) {
+    die('Requête invalide : ' . mysql_error());
+}
+
+while ($row = mysql_fetch_array($resultat)) {
+    echo $row['nom'];
+    echo $row['prenom'];
+    echo $row['adresse'];
+    echo $row['motDePasse'];
+}
+
 
 
  ?>
