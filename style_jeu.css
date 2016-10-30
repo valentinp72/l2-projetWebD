@@ -15,9 +15,10 @@
 }
 
 #imageDeJeu img {
-	width: 500px;
-	max-width: 100%;
+	max-width:500px;
+	max-height:300px;
 	height: auto;
+	width:auto;
 }
 
 #titre {

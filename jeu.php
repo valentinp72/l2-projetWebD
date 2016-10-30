@@ -1,47 +1,57 @@
 <?php
 	$titrePage = "Jeu";
 
-	$nomJeu = "Monopoly";
-	include('_header.php');
-	include('_hierarchie.php')
+	require '_connexionBDD.php'; // Connexion à la BDD
+
+
+	if(is_numeric($_GET['id'])){
+
+		$id = mysql_real_escape_string($_GET['id']);
+
+		$requete = mysql_query('SELECT * FROM Jeux WHERE ID_Jeu = "' . $id . '"');
+		if(!$requete) {
+				die('Erreur dans la requête : ' . mysql_error());
+		}
+
+		$valeur = mysql_fetch_array($requete);
+		if(!empty($valeur)){
+
+
+			$nomJeu = $valeur['NomJeu'];
+
+			include('_header.php');
+			include('_hierarchie.php');
+
 ?>
 
 
 <div id="titre"><?php echo $nomJeu ?> </div>
 
 <div id="imageDeJeu">
-	<img src="media/images_catalogue/monopoly.jpg" alt="illustration monopoly"/>
+	<img src="media/images_catalogue/<?php echo $valeur['pathImageJeu']?>" alt="illustration <?php echo $valeur['NomJeu']?>"/>
 </div>
 
 <div id="content">
 
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus commodo ullamcorper. Pellentesque placerat, nunc eget rutrum finibus, eros leo elementum risus, vel eleifend ante eros id lorem. Ut quis rhoncus elit. Cras a dolor eget odio luctus consequat sit amet eu eros. Donec interdum orci nunc, quis viverra libero varius in. Quisque sollicitudin quis sapien ac ornare. Morbi efficitur urna at sem aliquet, at malesuada diam ultrices.
-	</p>
+<?php echo $valeur['descriptionJeu']; ?>
+
 </div>
 
-<?php include('_footer.php'); ?>
+<?php
+
+	}
+	else {
+		$nomJeu = "Erreur";
+		include('_header.php');
+		include('_hierarchie.php');
+		echo "<div id='content'>Le jeu demandé n'existe pas.</div>";
+	}
+}
+else{
+	$nomJeu = "Erreur";
+	include('_header.php');
+	include('_hierarchie.php');
+	echo "<div id='content'>Le jeu demandé n'existe pas.</div>";
+}
+
+include('_footer.php'); ?>
