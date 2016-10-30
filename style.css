@@ -426,13 +426,20 @@ img.slide {
 /* ======= */
 /* CONTACT */
 /* ======= */
+form fieldset {
+	border: none;
+	margin-bottom: 40px;
+}
 form label {
 	display: block;
 	text-align: center;
 }
 form legend {
+	font-weight: bold;
+	font-size: 13pt;
 	width: 100%;
-	margin-bottom: 50px;
+	margin-top: 50px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 form input{
