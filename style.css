@@ -433,6 +433,7 @@ form fieldset {
 form label {
 	display: block;
 	text-align: center;
+	margin-top: 20px;
 }
 form legend {
 	font-weight: bold;

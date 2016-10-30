@@ -18,4 +18,7 @@ if(!$base){
   die("Selection impossible de la base.");
 }
 
+// Résoudre les problèmes d'encodage.
+mysql_query("SET NAMES UTF8");
+
 ?>
