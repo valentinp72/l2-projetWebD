@@ -6,20 +6,24 @@
 	}
 
 }
-
-@media all and (max-width: 1000px) {
-	#imageDeJeu {
-		margin: 20px;
-		text-align: center;
-	}
-}
-
 #imageDeJeu img {
 	max-width:500px;
 	max-height:300px;
 	height: auto;
 	width:auto;
 }
+
+@media all and (max-width: 1000px) {
+	#imageDeJeu {
+		margin: 20px;
+		text-align: center;
+	}
+	#imageDeJeu img {
+		max-width:100%;
+	}
+}
+
+
 
 #titre {
 	text-align: center;
