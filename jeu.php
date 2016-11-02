@@ -24,14 +24,31 @@
 
 ?>
 
-
-<div id="titre"><?php echo $nomJeu ?> </div>
-
-<div id="imageDeJeu">
-	<img src="media/images_catalogue/<?php echo $valeur['pathImageJeu']?>" alt="illustration <?php echo $valeur['NomJeu']?>"/>
-</div>
-
 <div id="content">
+
+<div id="titre"><?php echo $nomJeu ?></div>
+
+	<div id="jeuInfos">
+		<div id="imageDeJeu">
+			<img src="media/images_catalogue/<?php echo $valeur['pathImageJeu']?>" alt="illustration <?php echo $valeur['NomJeu']?>"/>
+		</div>
+
+		<div id="informations_jeu">
+			<h1>Informations</h1>
+			<div class="info_desc">Disponibilité : <span class="info_val">En stock</span></div>
+			<div class="info_desc">Âge : <span class="info_val">à partir de 8 ans</span></div>
+			<div class="info_desc">Activité calme</div>
+
+			<div id="criteres_jeu">
+				<span class="flaticon-error"></span>Habileté physique<br/>
+				<span class="flaticon-success"></span>Réflexion / décision<br/>
+				<span class="flaticon-success"></span>Générateur de hasard<br/>
+				<span class="flaticon-success"></span>Information complète et parfaite<br/>
+			</div>
+
+			<a href="panier.php" id="bouton_reserver">Réserver</a>
+		</div>
+	</div>
 
 <?php echo $valeur['descriptionJeu']; ?>
 

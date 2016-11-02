@@ -105,6 +105,8 @@ hr{
 	content: "\f100";
 }
 .flaticon-error:before {
+	color: #fd6c64;
+	margin-right: 10px;
 	content: "\f103";
 }
 .flaticon-heart:before {
@@ -120,6 +122,8 @@ hr{
 	content: "\f108";
 }
 .flaticon-success:before {
+	color: #aeea4d;
+	margin-right: 10px;
 	content: "\f109";
 }
 .flaticon-shopping-cart:before {
@@ -361,6 +365,7 @@ h2.WARNING{
 	background-color: white;
 	font-family: "Open Sans";
 	margin: 50px;
+	display: inline-block;
 }
 @media all and (max-width: 500px) {
 	#content {
@@ -388,7 +393,7 @@ h2.WARNING{
 /* ========= */
 
 #slideshow {
-	margin-top: 100px;
+	margin-top: -50px;
 }
 .slide {
 	display: none;
