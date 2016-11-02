@@ -37,13 +37,27 @@
 			<h1>Informations</h1>
 			<div class="info_desc">Disponibilité : <span class="info_val">En stock</span></div>
 			<div class="info_desc">Âge : <span class="info_val">à partir de 8 ans</span></div>
-			<div class="info_desc">Activité calme</div>
+			<div class="info_desc"><?php echo $valeur['type_jeu']; ?></div>
 
 			<div id="criteres_jeu">
-				<span class="flaticon-error"></span>Habileté physique<br/>
-				<span class="flaticon-success"></span>Réflexion / décision<br/>
-				<span class="flaticon-success"></span>Générateur de hasard<br/>
-				<span class="flaticon-success"></span>Information complète et parfaite<br/>
+				<?php
+					if($valeur['habilite_physique']) echo '<span class="flaticon-success"></span>';
+					else 														 echo '<span class="flaticon-error"></span>';
+					echo "Habileté physique<br/>";
+
+					if($valeur['reflexion']) echo '<span class="flaticon-success"></span>';
+					else 														 echo '<span class="flaticon-error"></span>';
+					echo "Réflexion / décision<br/>";
+
+					if($valeur['hasard']) echo '<span class="flaticon-success"></span>';
+					else 														 echo '<span class="flaticon-error"></span>';
+					echo "Générateur de hasard<br/>";
+
+					if($valeur['info_complete_parfaite']) echo '<span class="flaticon-success"></span>';
+					else 														 echo '<span class="flaticon-error"></span>';
+					echo "Information complète et parfaite<br/>";
+
+				?>
 			</div>
 
 			<a href="panier.php" id="bouton_reserver">Réserver</a>

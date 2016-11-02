@@ -56,6 +56,7 @@
 @media all and (max-width: 700px) {
 	#informations_jeu {
 		float: center;
+		margin-right: 0px;
 	}
 }
 #informations_jeu h1 {
