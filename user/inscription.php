@@ -56,7 +56,8 @@ if(isset($_SESSION['userID'])){
     $paysPost = mysql_real_escape_string($_POST['pays']);
 
     // On hash le mot de passe pour ne pas l'enregistrer en clair dans la BDD
-    $passwordPost = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    //$passwordPost = password_hash($_POST['password'], PASSWORD_DEFAULT);  <-- PHP 5.5.0 n'est pas installé à la Fac !
+		$passwordPost = hash("sha256", $_POST['password']);
 
 
     // On effectue la requête

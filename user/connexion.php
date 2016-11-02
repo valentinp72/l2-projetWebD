@@ -18,7 +18,8 @@ if(!$requete) {
 
 $valeur = mysql_fetch_array($requete);
 
-if(password_verify($passwordPost, $valeur['motDePasse'])){
+//if(password_verify($passwordPost, $valeur['motDePasse'])){ <-- PHP 5.5.0 n'est pas installé à la Fac !
+if(hash("sha256", $passwordPost) == $valeur['motDePasse']){
 	$_SESSION['userID'] = $valeur['motDePasse'];
 	header("Location: compte.php"); //On redirige l'utilisateur vers son compte une fois connecté
 }
