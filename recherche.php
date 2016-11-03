@@ -35,7 +35,7 @@ require '_connexionBDD.php'; // Connexion à la BDD
 					}
 					while ($valeur = mysql_fetch_array($requete)) {
 						echo '<option value="' . $valeur['type_jeu'] .'" ';
-						// on séléctionne l'element qui était déjà choisi lors de la derniere validation du formulaire 
+						// on séléctionne l'element qui était déjà choisi lors de la derniere validation du formulaire
 						if($_POST['recherche_type_jeu'] == $valeur['type_jeu']){
 							echo 'selected="selected"';
 						}
@@ -97,6 +97,11 @@ if(isset($_POST['rechercher'])){
 			$nb_criteres_recherche++;
 		}
 
+	}
+	else{
+		// Si aucun critère n'était spécifié, on liste tous les jeux
+		$rq = "SELECT * FROM VR_grp14_Jeux";
+	}
 
 		$requete = mysql_query($rq);
 		if(!$requete) {
@@ -135,8 +140,6 @@ if(isset($_POST['rechercher'])){
 		<?php
 
 
-
-	}
 
 
 
