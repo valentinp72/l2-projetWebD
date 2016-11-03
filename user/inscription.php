@@ -20,7 +20,7 @@ if(isset($_SESSION['userID'])){
   // Requête pour vérifier que l'adresse mail n'est pas déjà prise dans la BBD
 
   $emailPost = mysql_real_escape_string($_POST['email']);    // On empêche quelques injections SQL
-  $requete = mysql_query('SELECT ID FROM Clients WHERE email = "'. $emailPost .'"');
+  $requete = mysql_query('SELECT ID FROM VR_grp14_Client WHERE email = "'. $emailPost .'"');
   if(!$requete) die('Erreur dans la requête : ' . mysql_error());
   $requeteID = mysql_fetch_array($requete);
 
@@ -61,7 +61,7 @@ if(isset($_SESSION['userID'])){
 
 
     // On effectue la requête
-    $requete = mysql_query("INSERT INTO Clients (nom,
+    $requete = mysql_query("INSERT INTO VR_grp14_Client (nom,
                                                  prenom,
                                                  email,
                                                  motDePasse,

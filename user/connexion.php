@@ -11,7 +11,7 @@ $emailPost    = mysql_real_escape_string($_POST['email']);    // On empêche que
 $passwordPost = mysql_real_escape_string($_POST['password']); // en utilisant une fonction d'échappement
 
 
-$requete = mysql_query('SELECT motDePasse, ID FROM Clients WHERE email = "'. $emailPost .'"');
+$requete = mysql_query('SELECT motDePasse, ID FROM VR_grp14_Client WHERE email = "'. $emailPost .'"');
 if(!$requete) {
     die('Erreur dans la requête : ' . mysql_error());
 }
@@ -20,7 +20,8 @@ $valeur = mysql_fetch_array($requete);
 
 //if(password_verify($passwordPost, $valeur['motDePasse'])){ <-- PHP 5.5.0 n'est pas installé à la Fac !
 if(hash("sha256", $passwordPost) == $valeur['motDePasse']){
-	$_SESSION['userID'] = $valeur['motDePasse'];
+	$_SESSION['userID'] = $valeur['ID'];
+  $_SESSION['email'] = $emailPost;
 	header("Location: compte.php"); //On redirige l'utilisateur vers son compte une fois connecté
 }
 

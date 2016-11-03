@@ -8,7 +8,7 @@
 
 		$id = mysql_real_escape_string($_GET['id']);
 
-		$requete = mysql_query('SELECT * FROM Jeux WHERE ID_Jeu = "' . $id . '"');
+		$requete = mysql_query('SELECT * FROM VR_grp14_Jeux WHERE ID_Jeu = "' . $id . '"');
 		if(!$requete) {
 				die('Erreur dans la requête : ' . mysql_error());
 		}
@@ -35,9 +35,24 @@
 
 		<div id="informations_jeu">
 			<h1>Informations</h1>
-			<div class="info_desc">Disponibilité : <span class="info_val">En stock</span></div>
-			<div class="info_desc">Âge : <span class="info_val">à partir de 8 ans</span></div>
+			<div class="info_desc">Disponibilité :
+				<span class="info_val">
+					<?php
+						if($valeur['nbJeuxDispo'] == 0) echo 'non disponnible';
+						else echo 'en stock';
+					?>
+				</span></div>
+
+			<div class="info_desc">Âge : <span class="info_val">à partir de <?php echo $valeur['age_min']; ?> ans</span></div>
+
 			<div class="info_desc"><?php echo $valeur['type_jeu']; ?></div>
+
+			<div class="info_desc"><?php
+
+			if($valeur['joueurs_min'] == $valeur['joueurs_max']) echo $valeur['joueurs_min'] . " joueurs";
+			else echo "Entre " . $valeur['joueurs_min']. " et " . $valeur['joueurs_max'] . " joueurs"; 
+
+			?></div>
 
 			<div id="criteres_jeu">
 				<?php
@@ -59,8 +74,11 @@
 
 				?>
 			</div>
+			<?php
+				if($valeur['nbJeuxDispo'] == 0) echo '<span id="bouton_plusDeStock">Non disponnible</span>';
+				else echo '<a href="panier.php?ajouter='.$valeur['ID_Jeu'].'" id="bouton_reserver">Réserver</a>';
+			?>
 
-			<a href="panier.php" id="bouton_reserver">Réserver</a>
 		</div>
 	</div>
 

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $titrePage = "Nous contacter";
 include('_header.php');
 include('_hierarchie.php')
@@ -22,7 +23,7 @@ include('_hierarchie.php')
 		<form id="contact" method="post">
 			<p>
 				<label for="mail">Votre adresse mail : </label>
-				<input type="email" id="mail" name="mail" placeholder="Ex : bibi@exemple.com" value="<?php echo $_POST['mail']; ?>" required>
+				<input type="email" id="mail" name="mail" placeholder="Ex : bibi@exemple.com" value="<?php if(!empty($_POST['mail'])) echo $_POST['mail']; else echo $_SESSION['email']; ?>" required>
 			</p>
 			<p>
 				<label for="sujet">Sujet : </label>

@@ -5,7 +5,7 @@ include('_hierarchie.php');
 
 require '_connexionBDD.php'; // Connexion à la BDD
 
-$requete = mysql_query('SELECT * FROM Jeux');
+$requete = mysql_query('SELECT * FROM VR_grp14_Jeux');
 if(!$requete) {
     die('Erreur dans la requête : ' . mysql_error());
 }
