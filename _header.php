@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <!-- HEADER.PHP, page à appeler par chaque page du site. La variable $title doit être déclarée auparavant -->
