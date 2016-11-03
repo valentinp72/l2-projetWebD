@@ -372,6 +372,7 @@ h2.WARNING{
 	#content {
 		margin-left: 20px;
 		margin-right: 20px;
+		width: calc(100% - 40px);
 	}
 }
 
@@ -480,6 +481,7 @@ form textarea {
 	border:1px solid #cc0000;
 	border-radius:5px;
 	margin-bottom: 20px;
+	margin-left: -10px;
 }
 
 
