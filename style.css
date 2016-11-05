@@ -469,6 +469,11 @@ form input#submit{
 	color: #cc0000;
 	background-color: #dddddd;
 }
+form input.submit{
+	cursor: pointer;
+	color: #cc0000;
+	background-color: #dddddd;
+}
 form textarea {
 	font-family: "Open Sans";
 	font-size: 13pt;

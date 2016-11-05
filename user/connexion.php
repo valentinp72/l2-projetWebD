@@ -34,6 +34,7 @@ $titrePage = "Connexion";
 include($rootURL . '_header.php');
 include($rootURL . '_hierarchie.php');
 
+
 // Si l'utilisateur est déjà connecté
 if(isset($_SESSION['userID'])){
 	echo '<div id="content">';
