@@ -15,6 +15,7 @@ session_start();
 		<link rel="stylesheet" type="text/css" href="<?php echo $rootURL; ?>style.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="<?php echo $rootURL; ?>style_jeu.css" media="all" />
 		<link rel="stylesheet" type="text/css" href="<?php echo $rootURL; ?>style_catalogue.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="<?php echo $rootURL; ?>style_compte.css" media="all" />
 
 		<!-- Corrige le zoom sur les mobiles -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">

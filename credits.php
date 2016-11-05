@@ -28,6 +28,7 @@ include('_hierarchie.php')
 					<li><a href="https://pixabay.com/fr/jeux-jeux-en-bois-bois-jeux-anciens-1423899/">Jeu en bois ancien par NadineDoerle</a></li>
 				</ul>
 			</li>
+			<li>Les déscriptions des jeux proviennent de <a href="https://wikipedia.org">Wikipedia</a>.</li>
 		</ul>
 
 	<hr>

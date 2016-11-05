@@ -1,0 +1,39 @@
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #dddddd;
+}
+input.selecteur {
+  display: none;
+}
+label.label_selecteur {
+  display: inline-block;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #cc3333;
+  cursor: pointer;
+}
+input:checked + label {
+  color: #555000;
+  border: 1px solid #dddddd;
+  border-top: 2px solid #cc0000;
+  border-bottom: 1px solid #fff;
+}
+
+#tab_infos:checked ~ #infos,
+#tab_profil:checked ~ #profil,
+#tab_resa:checked ~ #resa{
+  display: block;
+}
+
+@media screen and (max-width: 580px) {
+  label.label_selecteur {
+    display: block;
+    border: 1px solid #ddd;
+  }
+  input:checked + label {
+    border-top: 2px solid #cc0000;
+    border-bottom: 2px solid #cc0000;
+  }
+}
