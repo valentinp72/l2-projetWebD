@@ -24,7 +24,7 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 
 			$categories = mysql_query("SELECT DISTINCT type_jeu FROM VR_grp14_Jeux");
 			while ($categorie = mysql_fetch_array($categories)) {
-				ajouterImage ($categorie);
+				ajouterImage ($categorie['type_jeu']);
 			}
 
 
