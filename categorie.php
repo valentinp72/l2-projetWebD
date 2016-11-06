@@ -1,6 +1,6 @@
 <?php
-	$categorie = $_GET['categorie'];
-	$titrePage = str_replace('_', ' ', $categorie);
+	$categorie = str_replace('_', ' ', $_GET['categorie']);
+	$titrePage = $categorie;
 	include('_header.php');
 	include('_hierarchie.php');
 	require '_connexionBDD.php'; // Connexion à la BDD
