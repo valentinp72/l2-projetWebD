@@ -75,7 +75,6 @@ if(isset($_POST['rechercher'])){
 	if(!empty($_POST['recherche_nom']) or !empty($_POST['recherche_age']) or !empty($_POST['recherche_nb_joueurs_min']) or !empty($_POST['recherche_nb_joueurs_max']) or !empty($_POST['recherche_type_jeu']) ){
 		if ($_POST['recherche_disponibilite'] == "indifferent") {
 			$rq = $rq . "WHERE ";
-			$nb_criteres_recherche++;
 		}
 		// Si le critère de recherche est spécifié :
 		if(!empty($_POST['recherche_nom'])){
