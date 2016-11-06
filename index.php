@@ -3,9 +3,11 @@ $titrePage = "Accueil";
 $cacherHierarchie = true;
 include('_header.php');
 include('_hierarchie.php');
+require '_connexionBDD.php'; // Connexion à la BDD
 
 // Affichage de la date en Français
-setlocale(LC_TIME, "fr_FR");
+//setlocale(LC_TIME, "fr_FR");
+setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 ?>
 <div id="content">
 
@@ -40,7 +42,6 @@ setlocale(LC_TIME, "fr_FR");
 	</div>
 
 	<?php
-		require '_connexionBDD.php'; // Connexion à la BDD
 
 		$requete = mysql_query('SELECT * FROM VR_grp14_Jeux WHERE date_sortie > "' . date("Y-m-d") . '"');
 		if(!$requete) {
