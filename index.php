@@ -28,10 +28,6 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 
 		?>
 
-  	<img class="slide" src="media/slides/des.jpg"  alt="Set de dés">
-		<img class="slide" src="media/slides/jeu1.jpg" alt="Jeu en bois">
-		<img class="slide" src="media/slides/jeu2.jpg" alt="Jeu en bois">
-
   	<a id="slideButtonLeft" class="slideButton"  onclick="plusDivs(-1)">&#10094;</a>
   	<a id="slideButtonRight" class="slideButton" onclick="plusDivs(1)">&#10095;</a>
 
