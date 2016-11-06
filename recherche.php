@@ -9,7 +9,7 @@ require '_connexionBDD.php'; // Connexion à la BDD
 
 <div id="content">
 
-	<form method="post" class="search">
+	<form method="post" class="search" action="recherche.php#resultat_recherche">
 		<fieldset>
 			<legend>Veuillez remplir au moins un des champs ci-dessous :</legend>
 			<label for="recherche_nom">Recherche par nom du jeu :</label>
@@ -120,7 +120,7 @@ if(isset($_POST['rechercher'])){
 
 		?>
 
-		<h2>Résultat de la recherche :</h2>
+		<h2 id="resultat_recherche">Résultat de la recherche :</h2>
 
 		<div id="liste_jeux">
 
