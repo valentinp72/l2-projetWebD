@@ -90,3 +90,15 @@
 	text-decoration: none;
 	font-size: 15pt;
 }
+#bouton_date_pas_dispo{
+	background-color: #ffa32c;
+	border-radius: 5px;
+	display: block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	width: 100%;
+	color: white;
+	text-decoration: none;
+	font-size: 15pt;
+}

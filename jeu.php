@@ -38,7 +38,8 @@
 			<div class="info_desc">Disponibilité :
 				<span class="info_val">
 					<?php
-						if($valeur['nbJeuxDispo'] == 0) echo 'non disponnible';
+						if(date("Y-m-d") < $valeur['date_sortie']) echo "à venir";
+						else if($valeur['nbJeuxDispo'] == 0) echo 'non disponnible';
 						else echo 'en stock';
 					?>
 				</span></div>
@@ -50,7 +51,7 @@
 			<div class="info_desc"><?php
 
 			if($valeur['joueurs_min'] == $valeur['joueurs_max']) echo $valeur['joueurs_min'] . " joueurs";
-			else echo "Entre " . $valeur['joueurs_min']. " et " . $valeur['joueurs_max'] . " joueurs"; 
+			else echo "Entre " . $valeur['joueurs_min']. " et " . $valeur['joueurs_max'] . " joueurs";
 
 			?></div>
 
@@ -75,7 +76,12 @@
 				?>
 			</div>
 			<?php
-				if($valeur['nbJeuxDispo'] == 0) echo '<span id="bouton_plusDeStock">Non disponnible</span>';
+				// Affichage de la date en Français
+				setlocale(LC_TIME, "fr_FR");
+
+
+				if(date("Y-m-d") < $valeur['date_sortie']) echo '<span id="bouton_date_pas_dispo">Dispo. le ' . strftime('%e %B %Y',strtotime($valeur['date_sortie'])) . '</span>';
+				else if($valeur['nbJeuxDispo'] == 0) echo '<span id="bouton_plusDeStock">Non disponnible</span>';
 				else echo '<a href="panier.php?ajouter='.$valeur['ID_Jeu'].'" id="bouton_reserver">Réserver</a>';
 			?>
 

@@ -90,7 +90,7 @@ require '_connexionBDD.php';
 						if(!empty($valeur)){
 
 							// Le jeu doit être en stock
-							if($valeur["nbJeuxDispo"] > 0){
+							if($valeur["nbJeuxDispo"] > 0 and date("Y-m-d") > $valeur['date_sortie']){
 
 								// On ajoute le jeu à l'array
 								array_push($_SESSION['panier']['produit'], $valeur['NomJeu']);

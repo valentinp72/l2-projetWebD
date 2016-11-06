@@ -430,6 +430,38 @@ img.slide {
 
 /* --------------------------------------------------------- */
 
+/* ========== */
+/* NOUVEAUTÉS */
+/* ========== */
+
+.nouveaute{
+	margin-bottom: 20px;
+}
+.titre_nouveaute{
+	font-weight: 600;
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 10px;
+}
+.titre_nouveaute a{
+	text-decoration: none;
+	color: black;
+}
+.titre_nouveaute a:hover{
+	color: #cc0000;
+}
+.info_nouveaute{
+	font-weight: normal;
+	padding-left: 20px;
+}
+.image_a_venir {
+	max-height:300px;
+	max-width:100%;
+	height: auto;
+	width:auto;
+}
+
+/* --------------------------------------------------------- */
+
 /* ======= */
 /* CONTACT */
 /* ======= */
