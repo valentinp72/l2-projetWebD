@@ -17,11 +17,11 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 			function ajouterImage ($nom) {
 				echo '<a href="recherche.php" >';
 				//$_POST['recherche_type_jeu'] = $nom;
-				$POST['rechercher'] = "Rechercher";
+				$_POST['rechercher'] = "Rechercher";
 				$path = str_replace (' ', '_', $nom);
 				echo '<img class="slide" src="media/slides/'.$path.'.jpg" alt="'.$nom.'"> </a>';
 			}
-			
+
 			$categories = mysql_query("SELECT DISTINCT type_jeu FROM VR_grp14_Jeux");
 			while ($categorie = mysql_fetch_array($categories)) {
 				ajouterImage ($categorie);
