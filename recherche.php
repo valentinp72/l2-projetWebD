@@ -45,8 +45,11 @@ require '_connexionBDD.php'; // Connexion à la BDD
 			</select>
 
 			<label for="recherche_disponibilite">Disponibilité :</label>
-			<input type="radio" name="recherche_disponibilite" value="disponible" <?php if ($_POST['recherche_disponibilite']  != "indifferent") echo "checked"; ?>> disponible
-			<input type="radio" name="recherche_disponibilite" value="indifferent" <?php if ($_POST['recherche_disponibilite'] == "indifferent") echo "checked"; ?>> indifférent
+			<select name="recherche_disponibilite">
+				<option value="disponible" <?php if ($_POST['recherche_disponibilite']  == 'disponible') echo 'selected="selected"'; ?>> disponible </option>
+				<option value="indifferent" <?php if ($_POST['recherche_disponibilite']  == 'indifferent') echo 'selected="selected"'; ?>> disponible </option>
+			</select>
+			
 
 			<input type="submit" id="submit" name="rechercher" value="Rechercher"/>
 		</fieldset>
