@@ -24,7 +24,7 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 			}
 			function ajouterImage ($nom) {
 				$categorie = str_replace (' ', '_', $nom);
-				$path = str_to_noaccent($nom);
+				$path = str_to_noaccent($categorie);
 				echo '<a href="categorie.php?categorie='.$categorie.'" >';
 				echo '<img class="slide" src="media/slides/'.$path.'.jpg" alt="'.$nom.'"> </a>';
 			}
