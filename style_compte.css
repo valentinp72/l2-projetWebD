@@ -23,7 +23,9 @@ input:checked + label {
 
 #tab_infos:checked ~ #infos,
 #tab_profil:checked ~ #profil,
-#tab_resa:checked ~ #resa{
+#tab_resa:checked ~ #resa,
+#tab_jeux:checked ~ #tab_jeux_content,
+#tab_users:checked ~ #tab_users_content{
   display: block;
 }
 
@@ -36,4 +38,15 @@ input:checked + label {
     border-top: 2px solid #cc0000;
     border-bottom: 2px solid #cc0000;
   }
+}
+
+.lien_divers{
+  text-decoration: none;
+  color: gray;
+  font-size: 14pt;
+  font-weight: 600;
+  padding: 5px;
+}
+.lien_divers:hover{
+  color: #cc0000;
 }

@@ -18,7 +18,7 @@
         $nomSansExt = str_replace("_", " ", $itemArray[0]);
 
 
-        if($nomSansExt != "index" and $nomSansExt != "user"){ //Sur la page index, on n'a pas besoin d'afficher l'item
+        if($nomSansExt != "index" and $nomSansExt != "user" and $nomSansExt != "admin"){ //Sur la page index, on n'a pas besoin d'afficher l'item
 
 
           if(substr($itemHier, 0, 7 ) === "jeu.php"){ //Si nous sommes sur la page jeu.php, on affiche manuellement le lien vers le catalogue
@@ -40,6 +40,10 @@
             echo "</a></li>";
           }
 
+        }
+        else if($nomSansExt == 'admin'){
+          echo "<li class='separator'></li>";
+          echo "<li><a href='index.php'>Admin</a></li>";
         }
 
       }
