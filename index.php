@@ -15,10 +15,8 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 
 		<?php
 			function ajouterImage ($nom) {
-				echo '<a href="recherche.php" >';
-				//$_POST['recherche_type_jeu'] = $nom;
-				$_POST['rechercher'] = "Rechercher";
 				$path = str_replace (' ', '_', $nom);
+				echo '<a href="categorie.php?categorie='.$path.'" >';
 				echo '<img class="slide" src="media/slides/'.$path.'.jpg" alt="'.$nom.'"> </a>';
 			}
 
