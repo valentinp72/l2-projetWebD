@@ -6,9 +6,8 @@ include('_hierarchie.php');
 require '_connexionBDD.php'; // Connexion à la BDD
 
 // Affichage de la date en Français
-setlocale(LC_TIME, "fr_FR");
-setlocale(LC_TIME, 'fr_FR.utf8','fra');
-
+//setlocale(LC_TIME, "fr_FR");
+setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 ?>
 <div id="content">
 
