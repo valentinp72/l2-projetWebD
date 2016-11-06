@@ -39,7 +39,7 @@
 				<span class="info_val">
 					<?php
 						if(date("Y-m-d") < $valeur['date_sortie']) echo "à venir";
-						else if($valeur['nbJeuxDispo'] == 0) echo 'non disponnible';
+						else if($valeur['nbJeuxDispo'] == 0) echo 'non disponible';
 						else echo 'en stock';
 					?>
 				</span></div>
@@ -77,11 +77,11 @@
 			</div>
 			<?php
 				// Affichage de la date en Français
-				setlocale(LC_TIME, "fr_FR");
+				setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 
 
 				if(date("Y-m-d") < $valeur['date_sortie']) echo '<span id="bouton_date_pas_dispo">Dispo. le ' . strftime('%e %B %Y',strtotime($valeur['date_sortie'])) . '</span>';
-				else if($valeur['nbJeuxDispo'] == 0) echo '<span id="bouton_plusDeStock">Non disponnible</span>';
+				else if($valeur['nbJeuxDispo'] == 0) echo '<span id="bouton_plusDeStock">Non disponible</span>';
 				else echo '<a href="panier.php?ajouter='.$valeur['ID_Jeu'].'" id="bouton_reserver">Réserver</a>';
 			?>
 

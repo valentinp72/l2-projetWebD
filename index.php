@@ -6,8 +6,8 @@ include('_hierarchie.php');
 require '_connexionBDD.php'; // Connexion à la BDD
 
 // Affichage de la date en Français
-//setlocale(LC_TIME, "fr_FR");
 setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
+
 ?>
 <div id="content">
 
@@ -32,7 +32,7 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 	<h2>Dérnières nouveautés :</h2>
 
 	<div class="nouveaute">
-		<div class="titre_nouveaute"><a href="jeu.php?id=1">Le jeu Monopoly est dès maintenant disponnible !</a><span class="info_nouveaute">le 06/11/16</span></div>
+		<div class="titre_nouveaute"><a href="jeu.php?id=1">Le jeu Monopoly est dès maintenant disponible !</a><span class="info_nouveaute">le 06/11/16</span></div>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 	<div class="nouveaute">
@@ -53,7 +53,7 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 
 			while ($valeur = mysql_fetch_array($requete)) {
 				echo '<div class="nouveaute">';
-					echo '<div class="titre_nouveaute"><a href="jeu.php?id='. $valeur['ID_Jeu'] .'">'. $valeur['NomJeu'] .'</a><span class="info_nouveaute">disponnible le '. strftime('%e %B %Y',strtotime($valeur['date_sortie'])) .'</span></div>';
+					echo '<div class="titre_nouveaute"><a href="jeu.php?id='. $valeur['ID_Jeu'] .'">'. $valeur['NomJeu'] .'</a><span class="info_nouveaute">disponible le '. strftime('%e %B %Y',strtotime($valeur['date_sortie'])) .'</span></div>';
 					echo "<div>";
 					echo substr($valeur['descriptionJeu'],0,300);
 					if(strlen($valeur['descriptionJeu']) > 300) echo "... [<a href='jeu.php?id=".$valeur['ID_Jeu']."'>voir la suite</a>]";
