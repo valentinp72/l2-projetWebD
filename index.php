@@ -20,11 +20,11 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 				$noaccent = preg_replace('#è|é|ê|ë#', 'e', $noaccent);
 				$noaccent = preg_replace('#à|â#', 'a', $noaccent);
 
-				return (strtolower($noaccent));
+				return strtolower($noaccent);
 			}
 			function ajouterImage ($nom) {
 				$categorie = str_replace (' ', '_', $nom);
-				$path = str_to_noaccent($categorie);
+				$path = str_to_noaccent_lower($categorie);
 				echo '<a href="categorie.php?categorie='.$categorie.'" >';
 				echo '<img class="slide" src="media/slides/'.$path.'.jpg" alt="'.$nom.'"> </a>';
 			}
