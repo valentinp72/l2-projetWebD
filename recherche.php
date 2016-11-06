@@ -44,6 +44,10 @@ require '_connexionBDD.php'; // Connexion à la BDD
 				?>
 			</select>
 
+			<label for="recherche_disponibilite">Disponibilité :</label>
+			<input type="radio" name="recherche_disponibilite" value="disponible" <?php if ($_POST['recherche_disponibilite']  != "indifferent") echo "checked"; ?>> disponible
+			<input type="radio" name="recherche_disponibilite" value="indifferent" <?php if ($_POST['recherche_disponibilite'] == "indifferent") echo "checked"; ?>> indifférent
+
 			<input type="submit" id="submit" name="rechercher" value="Rechercher"/>
 		</fieldset>
 	</form>
@@ -62,6 +66,10 @@ if(isset($_POST['rechercher'])){
 		$rq = "SELECT * FROM VR_grp14_Jeux WHERE ";
 		$nb_criteres_recherche = 0;
 
+		if ($_POST['recherche_disponibilite'] == "disponible") {
+			$rq = $rq . "nbJeuxDispo > 0";
+			$nb_criteres_recherche++;
+		}
 
 		// Si le critère de recherche est spécifié :
 		if(!empty($_POST['recherche_nom'])){
