@@ -68,7 +68,7 @@ if(isset($_POST['rechercher'])){
 	$nb_criteres_recherche = 0;
 
 	if ($_POST['recherche_disponibilite'] == "disponible") {
-		$rq = $rq . "WHERE nbJeuxDispo > 0";
+		$rq = $rq . "WHERE nbJeuxDispo > 0 AND " . date (Y-m-d) . " > date_sortie ";
 		$nb_criteres_recherche++;
 	}
 
