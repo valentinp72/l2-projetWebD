@@ -1,10 +1,8 @@
 <?php
-$titrePage = "Recherche";
-include('_header.php');
-include('_hierarchie.php');
-
-require '_connexionBDD.php'; // Connexion à la BDD
-
+	$titrePage = "Recherche";
+	include('_header.php');
+	include('_hierarchie.php');
+	require '_connexionBDD.php'; // Connexion à la BDD
 ?>
 
 <div id="content">
@@ -31,7 +29,7 @@ require '_connexionBDD.php'; // Connexion à la BDD
 					// On liste tous les types de jeux différents dispo dans la base
 					$requete = mysql_query("SELECT DISTINCT type_jeu FROM VR_grp14_Jeux");
 					if(!$requete) {
-							die('Erreur dans la requête : ' . mysql_error());
+						die('Erreur dans la requête : ' . mysql_error());
 					}
 					while ($valeur = mysql_fetch_array($requete)) {
 						echo '<option value="' . $valeur['type_jeu'] .'" ';
@@ -112,19 +110,19 @@ if(isset($_POST['rechercher'])){
 
 	}
 
-		$requete = mysql_query($rq);
-		if(!$requete) {
-				die('Erreur dans la requête : ' . mysql_error());
-		}
+	$requete = mysql_query($rq);
+	if(!$requete) {
+		die('Erreur dans la requête : ' . mysql_error());
+	}
 
 
-		?>
+?>
 
-		<h2 id="resultat_recherche">Résultat de la recherche :</h2>
+	<h2 id="resultat_recherche">Résultat de la recherche :</h2>
 
-		<div id="liste_jeux">
+	<div id="liste_jeux">
 
-			<?php
+		<?php
 			//Si il n'y a pas de résulats
 			if (mysql_num_rows($requete) == 0) {
 				echo "<p>Pas de résultats</p>";
@@ -136,27 +134,23 @@ if(isset($_POST['rechercher'])){
 				echo "		<div class='nom_jeu'><a href='jeu.php?id=" . $valeur['ID_Jeu'] . "'>". $valeur['NomJeu'] . "</a></div>\n		";
 
 				echo "		<div class='resume'>";
-					echo substr($valeur['descriptionJeu'],0,200);
-					if(strlen($valeur['descriptionJeu']) > 200) echo "... [<a href='jeu.php?id=".$valeur['ID_Jeu']."'>voir la suite</a>]";
+				echo substr($valeur['descriptionJeu'],0,200);
+
+				if(strlen($valeur['descriptionJeu']) > 200)
+					echo "... [<a href='jeu.php?id=".$valeur['ID_Jeu']."'>voir la suite</a>]";
+
 				echo "</div>";
 
 				echo "		<img src='media/images_catalogue/".$valeur['pathImageJeu']."' class='image_catalogue' alt='Illustration du jeu ".$valeur['NomJeu']."' />";
 				echo "\n		</div>\n";
 			}
-			?>
-		</div>
+		?>
+	</div>
 
-		<?php
-
-
-
-
-
+<?php
 }
 
 echo "</div>";
-
-
 include('_footer.php');
 
 ?>
