@@ -14,18 +14,17 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 	<div id="slideshow">
 
 		<?php
-			function str_to_noaccent($str) {
+			function str_to_noaccent_lower($str) {
 				$noaccent = $str;
 				$noaccent = preg_replace('#ç#', 'c', $noaccent);
 				$noaccent = preg_replace('#è|é|ê|ë#', 'e', $noaccent);
 				$noaccent = preg_replace('#à|â#', 'a', $noaccent);
 
-				return ($noaccent);
+				return strtolower($noaccent);
 			}
 			function ajouterImage ($nom) {
 				$categorie = str_replace (' ', '_', $nom);
 				$path = str_to_noaccent($categorie);
-				$path = strtolower($path);
 				echo '<a href="categorie.php?categorie='.$categorie.'" >';
 				echo '<img class="slide" src="media/slides/'.$path.'.jpg" alt="'.$nom.'"> </a>';
 			}
