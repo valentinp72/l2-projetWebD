@@ -7,7 +7,7 @@
 
 <div id="content">
 
-	<form method="post" class="search" action="recherche.php#resultat_recherche">
+	<form method="post" class="search" action="#resultat_recherche">
 		<fieldset>
 			<legend>Veuillez remplir au moins un des champs ci-dessous :</legend>
 			<label for="recherche_nom">Recherche par nom du jeu :</label>
