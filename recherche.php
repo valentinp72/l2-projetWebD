@@ -60,17 +60,20 @@ require '_connexionBDD.php'; // Connexion à la BDD
 
 if(isset($_POST['rechercher'])){
 
+	// Si aucun critère n'est spécifié, on liste tous les jeux
+	$rq = "SELECT * FROM VR_grp14_Jeux ";
+	$nb_criteres_recherche = 0;
+
+	if ($_POST['recherche_disponibilite'] == "disponible") {
+		$rq = $rq . "WHERE nbJeuxDispo > 0";
+		$nb_criteres_recherche++;
+	}
+
 	if(!empty($_POST['recherche_nom']) or !empty($_POST['recherche_age']) or !empty($_POST['recherche_nb_joueurs_min']) or !empty($_POST['recherche_nb_joueurs_max']) or !empty($_POST['recherche_type_jeu']) ){
-
-
-		$rq = "SELECT * FROM VR_grp14_Jeux WHERE ";
-		$nb_criteres_recherche = 0;
-
-		if ($_POST['recherche_disponibilite'] == "disponible") {
-			$rq = $rq . "nbJeuxDispo > 0";
+		if ($_POST['recherche_disponibilite'] == "indifferent") {
+			$rq = $rq . "WHERE ";
 			$nb_criteres_recherche++;
 		}
-
 		// Si le critère de recherche est spécifié :
 		if(!empty($_POST['recherche_nom'])){
 			// On ajoute AND à la requete si il y avait déjà d'autres critères
@@ -105,10 +108,6 @@ if(isset($_POST['rechercher'])){
 			$nb_criteres_recherche++;
 		}
 
-	}
-	else{
-		// Si aucun critère n'était spécifié, on liste tous les jeux
-		$rq = "SELECT * FROM VR_grp14_Jeux";
 	}
 
 		$requete = mysql_query($rq);
