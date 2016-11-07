@@ -67,7 +67,7 @@ require '_connexionBDD.php';
 			// L'id du jeu à ajouter doit être un nombre
 			if(is_numeric($_GET['ajouter'])){
 
-				// Le panier ne doit pas contenir moins de 3 articles
+				// Le panier ne doit pas contenir plus de 3 articles
 				if(get_nb_produits_panier() >= 3){
 					echo "<h3>Le produit demandé n'a pas pu être ajouter au panier : votre panier contient déjà 3 produits.</h3>";
 				}
@@ -76,7 +76,16 @@ require '_connexionBDD.php';
 					$id = mysql_real_escape_string($_GET['ajouter']);
 					//Si le produit que l'on veut ajouter est déjà dans le panier, on change sa quantité
 					if(in_array($id,$_SESSION['panier']['id'])){
-						$_SESSION['panier']['qteProduit'][array_search($id, $_SESSION['panier']['id'])]++;
+						$indexPanier = array_search($id, $_SESSION['panier']['id']);
+						$qteProduit = $_SESSION['panier']['qteProduit'][$indexPanier];
+						$requete = mysql_query('SELECT * FROM VR_grp14_Jeux
+																		WHERE ID_Jeu = '.$id
+																		.' AND nbJeuxDispo > '.$qteProduit);
+						$valeur = mysql_fetch_array($requete);
+						if (!empty($valeur)) {
+							$_SESSION['panier']['qteProduit'][$indexPanier]++;
+						}
+						else echo "Il n'y a que ".$qteProduit." item de disponible !!";
 					}
 					else{
 						$requete = mysql_query('SELECT * FROM VR_grp14_Jeux WHERE ID_Jeu = "' . $id . '"');
