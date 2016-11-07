@@ -133,7 +133,7 @@ require '_connexionBDD.php';
 				echo "</tr>\n";
 			}
 			echo "\n\n</table>";
-			echo '<div id="reserver_div"><a href="reserver.php" id="reserver">Réserver</a></div>';
+			echo '<div id="reserver_div"><a href="user/reserver.php" id="reserver">Réserver</a></div>';
 		}
 
 	?>
