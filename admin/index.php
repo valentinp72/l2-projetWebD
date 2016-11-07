@@ -12,6 +12,23 @@ include($rootURL . '_hierarchie.php');
 require $rootURL . '_connexionBDD.php'; // Connexion à la BDD
 
 
+if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
+
+  $requete = mysql_query("DELETE FROM VR_grp14_Reservation WHERE ID_Commande = " . $_GET['supprimer_resa'] . "");
+  if(!$requete) {
+      die('Erreur dans la requête : ' . mysql_error());
+  }
+
+  // On réincremente le nombre de jeux dispo
+  $requete = mysql_query("UPDATE VR_grp14_Jeux SET nbJeuxDispo = nbJeuxDispo + 1 WHERE ID_Jeu = " . $_GET['supprimer_resa']);
+
+  if(!$requete) {
+    die('Erreur dans la requête : ' . mysql_error());
+  }
+
+}
+
+
 ?>
 
 <div id="content">
@@ -56,14 +73,73 @@ require $rootURL . '_connexionBDD.php'; // Connexion à la BDD
   </section>
 
   <section id="tab_users_content">
-    Liste des utilisateurs
+
+
+    <?php
+
+    $requete = mysql_query('SELECT * FROM VR_grp14_Client');
+    if(!$requete) {
+        die('Erreur dans la requête : ' . mysql_error());
+    }
+    if (mysql_num_rows($requete) == 0) {
+      echo "Aucun client n'est inscrit. :'(";
+    }
+    else{
+
+      echo "<table class='admin_table'>";
+      echo "<tr><th>ID Client</th><th>Nom du client</th><th>Adresse</th><th>Code postal</th><th>Pays</th><th>Supprimer le client ?</th></tr>";
+
+
+      while($valeur = mysql_fetch_array($requete)){
+        echo "<tr>";
+
+        echo "</tr>";
+      }
+
+      echo "</table>";
+    }
+
+
+    ?>
 
 
   </section>
 
 
   <section id="resa">
-    Liste des réservations à venir et en cours
+
+
+    <?php
+
+    $requete = mysql_query('SELECT * FROM VR_grp14_Reservation NATURAL JOIN VR_grp14_Client NATURAL JOIN VR_grp14_Jeux');
+    if(!$requete) {
+        die('Erreur dans la requête : ' . mysql_error());
+    }
+    if (mysql_num_rows($requete) == 0) {
+      echo "Aucune réservation n'est en cours.";
+    }
+    else{
+
+      echo "<table class='admin_table'>";
+      echo "<tr><th>ID Client</th><th>Nom du client</th><th>Jeu à rendre</th><th>Date limite de rendu</th><th>Supprimer le rendu ?</th></tr>";
+
+
+      while($valeur = mysql_fetch_array($requete)){
+        echo "<tr>";
+        echo "<td>" . $valeur['ID'] . "</td>";
+        echo "<td>" . $valeur['prenom'] . " " . $valeur['nom'] . "</td>";
+        echo "<td>" . $valeur['NomJeu'] . "</td>";
+        echo "<td>" . date('d/m/Y', strtotime($valeur['date_limite'])) . "</td>";
+        echo "<td><a href='?supprimer_resa=" . $valeur['ID_Commande'] . "'>Rendu</a>";
+        echo "</tr>";
+      }
+
+      echo "</table>";
+
+
+    }
+
+    ?>
 
 
   </section>

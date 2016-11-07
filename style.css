@@ -460,6 +460,12 @@ img.slide {
 	width:auto;
 }
 
+
+.admin_table {
+	text-align: center;
+	width: 100%;
+}
+
 /* --------------------------------------------------------- */
 
 /* ======= */
@@ -566,7 +572,7 @@ form select{
 	display: inline;
 }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 850px) {
 	#footer li {
 		display: list-item;
 		list-style-type: none;

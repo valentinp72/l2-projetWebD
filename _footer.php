@@ -10,6 +10,8 @@
       <li class="separator">|</li>
     <li><a href="<?php echo $rootURL; ?>nous_contacter.php">Nous contacter</a></li>
       <li class="separator">|</li>
+    <li><a href="<?php echo $rootURL; ?>admin/index.php">Administration</a></li>
+      <li class="separator">|</li>
     <li><a href="https://github.com/valentinp72/projetWebD"><span class="flaticon-circle"> Github</span></a></li>
   </ul>
 
