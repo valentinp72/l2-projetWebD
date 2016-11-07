@@ -24,7 +24,7 @@
 
 			<label for="recherche_type_jeu">Type de jeu :</label>
 			<select name="recherche_type_jeu" id="recherche_type_jeu">
-				<option value="DEFAULT" selected="selected" disabled>Choissiez votre type de jeu</option>
+				<option value="DEFAULT" selected="selected">Tous</option>
 				<?php
 					// On liste tous les types de jeux différents dispo dans la base
 					$requete = mysql_query("SELECT DISTINCT type_jeu FROM VR_grp14_Jeux");
@@ -70,7 +70,7 @@ if(isset($_POST['rechercher'])){
 		$nb_criteres_recherche++;
 	}
 
-	if(!empty($_POST['recherche_nom']) or !empty($_POST['recherche_age']) or !empty($_POST['recherche_nb_joueurs_min']) or !empty($_POST['recherche_nb_joueurs_max']) or !empty($_POST['recherche_type_jeu']) ){
+	if(!empty($_POST['recherche_nom']) or !empty($_POST['recherche_age']) or !empty($_POST['recherche_nb_joueurs_min']) or !empty($_POST['recherche_nb_joueurs_max']) or $_POST['recherche_type_jeu'] != "DEFAULT"){
 		if ($_POST['recherche_disponibilite'] == "indifferent") {
 			$rq = $rq . "WHERE ";
 		}
@@ -102,7 +102,7 @@ if(isset($_POST['rechercher'])){
 			$nb_criteres_recherche++;
 		}
 
-		if(!empty($_POST['recherche_type_jeu'])){
+		if(!empty($_POST['recherche_type_jeu']) and $_POST['recherche_type_jeu'] != "DEFAULT"){
 			if($nb_criteres_recherche != 0) $rq = $rq . " AND ";
 			$rq = $rq . "type_jeu = '" . $_POST['recherche_type_jeu'] . "'";
 			$nb_criteres_recherche++;
