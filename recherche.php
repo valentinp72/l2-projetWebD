@@ -125,7 +125,7 @@ if(isset($_POST['rechercher'])){
 		<?php
 			//Si il n'y a pas de résulats
 			if (mysql_num_rows($requete) == 0) {
-				echo "<p>Pas de résultats</p>";
+				echo '<a href="http://giphy.com/gifs/nothing-george-costanza-baPIkfAo0Iv5K"><img src="http://i.giphy.com/baPIkfAo0Iv5K.gif" alt="pas de resulats"></a>';
 			}
 			while ($valeur = mysql_fetch_array($requete)) {
 
