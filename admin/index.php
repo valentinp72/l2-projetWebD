@@ -20,7 +20,7 @@ if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
   }
 
   // On réincremente le nombre de jeux dispo
-  $requete = mysql_query("UPDATE VR_grp14_Jeux SET nbJeuxDispo = nbJeuxDispo + 1 WHERE ID_Jeu = " . $_GET['supprimer_resa']);
+  $requete = mysql_query("UPDATE VR_grp14_Jeux SET nbJeuxDispo = nbJeuxDispo + 1 WHERE ID_Jeu = (SELECT ID_Jeu FROM VR_grp14_Reservation WHERE ID_Commande = " . $_GET['supprimer_resa'].")");
 
   if(!$requete) {
     die('Erreur dans la requête : ' . mysql_error());
