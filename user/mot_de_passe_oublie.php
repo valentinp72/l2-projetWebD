@@ -18,7 +18,7 @@ if(isset($_SESSION['userID'])){
 
 <div id="content">
 
-  <iframe src="//giphy.com/embed/NGV4vAghFiUOA" width="480" height="333" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/NGV4vAghFiUOA">via GIPHY</a></p>
+  <p><a href="http://giphy.com/gifs/NGV4vAghFiUOA"><img src="http://i.giphy.com/NGV4vAghFiUOA.gif" alt="well, shame on you"></a></p>
 
 
   Bah fallait pas oublier ton mot de passe.
