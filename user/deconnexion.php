@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo "bonjour";
+$rootURL = "../";
 require $rootURL . '_connexionBDD.php';
 
 $n = count($_SESSION['panier']['produit']);
