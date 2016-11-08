@@ -179,7 +179,33 @@ require $rootURL . '_connexionBDD.php';
 	</section>
 
 	<section id="resa">
-		<p>Voici tes réservations.</p>
+
+		<?php
+
+		$requete = mysql_query('SELECT * FROM VR_grp14_Reservation NATURAL JOIN VR_grp14_Client NATURAL JOIN VR_grp14_Jeux WHERE ID = "'. $_SESSION['userID'] .'"');
+		if(!$requete) {
+		    die('Erreur dans la requête : ' . mysql_error());
+		}
+		if (mysql_num_rows($requete) == 0) {
+			echo "<p>Vous n'avez pas de réservation en cours. <a href='../catalogue.php'>Voulez découvrir des jeux ?</a></p>";
+		}
+
+		else{
+
+			while($valeur = mysql_fetch_array($requete)){
+				echo "<p>";
+				echo "Vous avez réservé le jeu <span class='bold'>" . $valeur['NomJeu'] . "</span>. Il est à rendre avant le <span class='bold'>" . date('d/m/Y', strtotime($valeur['date_limite'])) . "</span>.";
+				echo "</p>";
+
+			}
+
+		}
+
+
+
+		?>
+
+
 	</section>
 
 
