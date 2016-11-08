@@ -49,10 +49,10 @@ setlocale(LC_TIME, 'fr','fr_FR','fr_FR@euro','fr_FR.utf8','fr-FR','fra');
 		Bonjour, bienvenue sur le site de la LudoTEK. Sur ce site, vous pourrez réserver les jeux présents dans notre ludothéque située 22 rue de nulle part au Mans, pour venir les chercher, ou y jouer directement sur place. Nous sommes ouverts du lundi au vendredi de 8h à 18h.
 	</p>
 
-	<h2>Dérnières nouveautés :</h2>
+	<h2>Dernières nouveautés :</h2>
 
 	<div class="nouveaute">
-		<div class="titre_nouveaute"><a href="jeu.php?id=1">Le jeu Monopoly est dès maintenant disponnible !</a><span class="info_nouveaute">le 06/11/16</span></div>
+		<div class="titre_nouveaute"><a href="jeu.php?id=1">Le jeu Monopoly est dès maintenant disponible !</a><span class="info_nouveaute">le 06/11/16</span></div>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	</div>
 	<div class="nouveaute">
