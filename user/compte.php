@@ -86,21 +86,23 @@ require $rootURL . '_connexionBDD.php';
 	?>
 
 	<section id="infos">
+		<h3>Informations générales</h3>
 		<p>Bonjour, <?php echo $valeur['prenom'] . " " . $valeur['nom']; ?>.</p>
 	</section>
 
 	<section id="profil">
-		<p>
 
 			<?php
 
 				echo "<h3>Mes coordonnées</h3>";
+				echo "<p>";
 				echo $valeur['nom'] . " " . $valeur['prenom'] . "<br/>";
 				echo $valeur['adresse'] . "<br/>";
 				echo $valeur['codePostal'] . "<br/>";
 				echo $valeur['ville'] . "<br/>";
 				echo $valeur['pays'] . "<br/>";
 				echo $valeur['mail'] . "<br/>";
+				echo "</p>";
 
 				echo "<h3>Modifier mes coordonnées</h3>";
 
@@ -175,10 +177,10 @@ require $rootURL . '_connexionBDD.php';
 			</form>
 
 
-		</p>
 	</section>
 
 	<section id="resa">
+		<h3>Mes réservations</h3>
 
 		<?php
 

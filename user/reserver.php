@@ -64,6 +64,12 @@ else {
     }
   }
 
+  //On vide le panier
+
+  $_SESSION['panier'] = array();
+  $_SESSION['panier']['produit'] = array();
+  $_SESSION['panier']['id'] = array();
+  $_SESSION['panier']['qteProduit'] = array();
 
   echo "Vous pouvez dès à présent venir chercher vos jeux, ils seront à rendre le " . date('d/m/Y',$date) . ".";
 
