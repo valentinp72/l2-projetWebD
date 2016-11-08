@@ -9,6 +9,15 @@ if(empty($_SESSION['panier']['produit'])){
   header('location: ../panier.php');
 }
 
+function get_nb_produits_panier(){
+	$total=0;
+	for($i = 0; $i < count($_SESSION['panier']['produit']); $i++)
+	{
+		 $total += $_SESSION['panier']['qteProduit'][$i];
+	}
+	return $total;
+
+}
 
 $titrePage = "Réservation";
 include($rootURL . '_header.php');
@@ -19,7 +28,7 @@ $requete = mysql_query('SELECT * FROM VR_grp14_Reservation WHERE ID = "'. $_SESS
 if(!$requete) {
     die('Erreur dans la requête : ' . mysql_error());
 }
-if (mysql_num_rows($requete) >= 3) {
+if (mysql_num_rows($requete) + get_nb_produits_panier() > 3) {
   echo "<div id='content'>Vous avez déjà des commandes en cours !</div>";
 }
 else {
