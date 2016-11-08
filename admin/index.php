@@ -38,7 +38,30 @@ if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
 
 }
 
+if(isset($_GET['supprimer_client']) and is_numeric($_GET['supprimer_client'])){
 
+  $requete = mysql_query('SELECT * FROM VR_grp14_Reservation WHERE ID = "'. $_GET['supprimer_client'] .'"');
+  if(!$requete) {
+      die('Erreur dans la requête : ' . mysql_error());
+  }
+
+  // On supprime le client que si il a rendu tout ses jeux
+  if (mysql_num_rows($requete) == 0) {
+
+    // On supprime le client
+    $requete = mysql_query("DELETE FROM VR_grp14_Client WHERE ID = " . $_GET['supprimer_client']);
+    if(!$requete) {
+       die('Erreur dans la requête : ' . mysql_error());
+    }
+    $client_has_resa = FALSE;
+  }
+  else{
+    $client_has_resa = TRUE;
+  }
+
+
+
+}
 ?>
 
 <div id="content">
@@ -53,6 +76,9 @@ if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
 	<label for="tab_resa" class="label_selecteur">Réservations</label>
 
   <section id="tab_jeux_content">
+
+    <h3>Jeux</h3>
+
 
     <a href="ajouter_jeu.php" class="lien_divers">Ajouter un jeu</a>
     <div id="liste_jeux">
@@ -83,9 +109,13 @@ if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
   </section>
 
   <section id="tab_users_content">
-
+    <h3>Utilisateurs</h3>
 
     <?php
+
+    if($client_has_resa == TRUE){
+      echo "<p>Suppression impossible du client : il possède des réservations en cours.</p>";
+    }
 
     $requete = mysql_query('SELECT * FROM VR_grp14_Client');
     if(!$requete) {
@@ -97,12 +127,18 @@ if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
     else{
 
       echo "<table class='admin_table'>";
-      echo "<tr><th>ID Client</th><th>Nom du client</th><th>Adresse</th><th>Code postal</th><th>Pays</th><th>Supprimer le client ?</th></tr>";
+      echo "<tr><th>ID Client</th><th>Nom du client</th><th>Adresse</th><th>Code postal</th><th>Ville</th><th>Pays</th><th>Supprimer le client ?</th></tr>";
 
 
       while($valeur = mysql_fetch_array($requete)){
         echo "<tr>";
-
+        echo "<td>" . $valeur['ID'] . "</td>";
+        echo "<td>" . $valeur['prenom'] . " " . $valeur['nom'] . "</td>";
+        echo "<td>" . $valeur['adresse'] . "</td>";
+        echo "<td>" . $valeur['codePostal'] . "</td>";
+        echo "<td>" . $valeur['ville'] . "</td>";
+        echo "<td>" . $valeur['pays'] . "</td>";
+        echo "<td><a href='?supprimer_client=" . $valeur['ID'] . "'>Supprimer</a></td>";
         echo "</tr>";
       }
 
@@ -118,6 +154,7 @@ if(isset($_GET['supprimer_resa']) and is_numeric($_GET['supprimer_resa'])){
 
   <section id="resa">
 
+    <h3>Réservations</h3>
 
     <?php
 
