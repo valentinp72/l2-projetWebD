@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '_connexionBDD.php';
+require $rootURL . '_connexionBDD.php';
 
 $n = count($_SESSION['panier']['produit']);
 if ($n > 0) {
